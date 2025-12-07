@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html4activity</title>
+</head>
+<body>
+<h1 align="center">HTML Chapter 4 Activity</h1>
+<p ><font size="5px">1.	Basic Form Creation</font></p>
+<!-- starting forms  -->
+ <form action="/submit_page" method="POST">
+        
+        <p>
+            <label for="first_name">First Name</label><br>
+            <input type="text" id="first_name" name="first_name" required>
+        </p>
+
+        <p>
+            <label for="last_name">Last Name</label><br>
+            <input type="text" id="last_name" name="last_name" required>
+        </p>
+
+        <p>
+            <label for="email_address">Email Address:</label><br>
+            <!-- Using type="email" provides basic built-in browser validation -->
+            <input type="email" id="email_address" name="email_address" required><br><br>
+        </p>
+
+        <!-- The submit button that sends the form data -->
+        <button type="submit">Submit </button>
+        
+    </form>
+    <!-- end form -->
+
+    <p><font size="5px">2.	Form with Different Input Types</font></p>
+    
+    <form action="/submit_page" method="POST">
+          <label for="name">Name</label><br>
+          <input type="text" id="name" name="name"required><br><br>
+
+          <label for="pwd">Password</label><br>
+          <!-- using type="password" provides basic build-in validation -->
+          <input type="password"id="pwd"name="pwd"required><br><br>
+        
+          <label for="email">Email Address</label><br>
+            <!-- using type="email" provides basic build-in validation -->
+          <input type="email"id="email"name="email"required><br><br><br>
+
+          <!-- The submit button that sends the form data -->
+          <button type="submit">Submit</button>
+    </form>
+
+    <p><font size="5px">3.	Form with Labels</font></p>
+      <form action="/submit_profile" method="POST">
+        
+        <label for="user_name">Name:</label><br>
+        <input type="text" id="user_name" name="user_name" required><br><br>
+
+         <label for="user_email">Email Address:</label><br>
+         <input type="email" id="user_email" name="user_email" required><br><br>
+      
+         <label for="user_bio">About Me</label><br>
+            <!-- A <textarea> is used for multi-line text input -->
+         <textarea id="user_bio" name="user_bio" rows="4" cols="50" maxlength="20" required></textarea><br><br>
+
+        <!-- The submit button sends the form data -->
+        <button type="submit">Save Profile</button>
+        
+    </form>
+
+    <p><font size="5px">4.	Radio Buttons and Checkboxes</font></p>
+    <form action="/submit_page"method="POST">
+         
+        <label for="name">Name</label><br>
+          <input type="text" id="name" name="name"required><br><br>
+
+          <label for="pwd">Password</label><br>
+          <!-- using type="password" provides basic build-in validation -->
+          <input type="password"id="pwd"name="pwd"required><br><br>
+        
+          <label for="email">Email Address</label><br>
+            <!-- using type="email" provides basic build-in validation -->
+          <input type="email"id="email"name="email"required><br>
+
+        <p><font size="3px">Choose your favorite color:</font></p>
+
+        <form>
+                      <div>
+                             <input type="radio" id="color_red" name="favorite_color" value="Red" >
+                             <label for="color_red">Red</label><br>
+                          
+                          
+                             <input type="radio" id="color_blue" name="favorite_color" value="Blue">
+                             <label for="color_blue">Blue</label><br>
+                          
+                          
+                             <input type="radio" id="color_green" name="favorite_color" value="Green">
+                             <label for="color_green">Green</label><br>
+
+
+                             
+                        </div>
+
+                        
+        </form>
+        
+    
+
+    <p>Select your hobbies:</p>
+    
+
+        <!-- input type="checkbox" can be used for checkboxes -->
+       <input type="checkbox"id="rding"name="rding">
+       <label for="rding">Reading</label><br>
+       
+       <!-- input type="checkbox" can be used for checkboxes -->
+       <input type="checkbox"id="trvlng"name="trvlng">
+       <label for="trvlng">Traveling</label><br>
+
+       <!-- input type="checkbox" can be used for checkboxes -->
+       <input type="checkbox"id="cooking"name="cooking">
+       <label for="cooking">Cooking</label><br><br>
+
+        <!-- The submit button save the form data -->
+        <button type="sumbit">Save</button>
+        <br><br>
+       
+    </form>
+
+    <p><font size="5px">5.	Dropdown Menus</font></p> 
+
+    <form action="submit"method="POST">
+       <label for="country">Select your country:</label>
+
+       <!--  A select box, also called drop down box provides option to 
+             list down various options in the form of drop down list, 
+             from where a user can select one or more options. -->
+       <select name="country" required>
+          <option value="india">India</option>
+          <option value="qatar"selected>Qatar</option>
+          <option value="ksa">K.S.A</option>
+          <option value="uae">U.A.E</option>
+       </select>
+         <br><br>
+
+         <!-- button -->
+        <button type="submit">Save</button>
+    </form>
+
+    <p><font size="5px">6.	Text Areas</font></p>
+    <form action="sumbit"method="POST">
+        <p>feedback</p>
+        <textarea id="fdbck"name="fdbck"rows="8"cols="40"placeholder="type your feedback here..."required></textarea>
+    </form>
+
+    <p><font size="5px">7.	Grouping Form Elements</font></p>
+    <form method="POST">
+         <!-- SECTION 1: PERSONAL DETAILS (Grouped using <fieldset>&<legend>) -->
+            <fieldset>
+                <legend>Personal Details</legend><br>
+
+                <label for="full_name">Full Name</label><br>
+                <input type="text"id="full_name"name="full_name"required><br><br>
+
+                <label for="email">Email</label><br>
+                <input type="email"id="email"required>
+            </fieldset><br>
+
+             <!-- SECTION 2: PREFERENCES (Grouped using <fieldset> and <legend>) -->
+                <fieldset>
+                    <legend>Preferences</legend><br>
+                     <!-- Sub-section A: Favorite Color (Radio Buttons) -->
+                     <fieldset>
+                          <legend>What is your favorite color?</legend>
+                          <div>
+                             <input type="radio" id="color_red" name="favorite_color" value="Red" >
+                             <label for="color_red">Red</label>
+                          </div>
+                          <div>
+                             <input type="radio" id="color_blue" name="favorite_color" value="Blue">
+                             <label for="color_blue">Blue</label>
+                          </div>
+                          <div>
+                             <input type="radio" id="color_green" name="favorite_color" value="Green">
+                             <label for="color_green">Green</label>
+                          </div>
+                     </fieldset><br>
+
+                    <!-- Sub-section B: Hobbies (Checkboxes) -->
+                      <fieldset>
+                            <legend>Which hobbies do you enjoy the most?</legend>
+                            <div>
+                               <input type="checkbox" id="hobby_reading" name="hobbies[]" value="Reading">
+                               <label for="hobby_reading">Reading</label>
+                            </div>
+                            <div>
+                               <input type="checkbox" id="hobby_traveling" name="hobbies[]" value="Traveling">
+                               <label for="hobby_traveling">Traveling</label>
+                            </div>
+                            <div>
+                               <input type="checkbox" id="hobby_cooking" name="hobbies[]" value="Cooking">
+                               <label for="hobby_cooking">Cooking</label>
+                            </div>
+                      </fieldset>
+
+                </fieldset><br><br>
+
+                  <!-- SUBMIT BUTTON for the entire form -->
+        <div>
+            <button  type="submit">Save</button>
+        </div>
+<p><font size="5px">8.	Form with Action and Method</font></p>
+<form action="/https:submit" method="POST">
+        
+        <p>
+            <label for="first_name">First Name</label><br>
+            <input type="text" id="first_name" name="first_name" required>
+        </p>
+
+        <p>
+            <label for="last_name">Last Name</label><br>
+            <input type="text" id="last_name" name="last_name" required>
+        </p>
+
+        <p>
+            <label for="email_address">Email Address:</label><br>
+            <!-- Using type="email" provides basic built-in browser validation -->
+            <input type="email" id="email_address" name="email_address" required><br><br>
+        </p>
+
+        <!-- The submit button that sends the form data -->
+        <button type="submit">Submit </button>
+        
+    </form>
+
+    <p><font size="5px">9.	Form with Fieldsets and Legends</font></p>
+    <fieldset>
+        <legend>Personal Details</legend><br>
+        <form action="sumbit"method="POST">
+            <label for="fname">First Name</label><br>
+            <input type="text"id="fname"name="fname"><br><br>
+
+            <label for="lname">Last Name</label><br>
+            <input type="text"id="lname"name="lname"><br><br>
+
+            <label for="email">Email Address</label><br>
+            <input type="email"id="email" name="email"><br><br>
+
+            <label for="abutme">About Me</label>
+            <textarea id="abutme" name="abutme" rows="4" cols="50" maxlength="20" required></textarea><br><br>
+            
+        </form>
+    </fieldset><br>
+
+     <fieldset>
+                    <legend>Preferences</legend><br>
+                     <!-- Sub-section A: Favorite Color (Radio Buttons) -->
+                     <fieldset>
+                         <form>
+                             <legend>What is your favorite color?</legend>
+                          <div>
+                             <input type="radio" id="color_red" name="favorite_color" value="Red" >
+                             <label for="color_red">Red</label>
+                          
+                          
+                             <input type="radio" id="color_blue" name="favorite_color" value="Blue">
+                             <label for="color_blue">Blue</label>
+                          
+                          
+                             <input type="radio" id="color_green" name="favorite_color" value="Green">
+                             <label for="color_green">Green</label>
+                          </div>
+                         </form>
+                     </fieldset><br>
+
+                    <!-- Sub-section B: Hobbies (Checkboxes) -->
+                      <fieldset>
+                            <legend>Which hobbies do you enjoy the most?</legend>
+                            <div>
+                               <input type="checkbox" id="hobby_reading" name="hobbies[]" value="Reading">
+                               <label for="hobby_reading">Reading</label>
+                            </div>
+                            <div>
+                               <input type="checkbox" id="hobby_traveling" name="hobbies[]" value="Traveling">
+                               <label for="hobby_traveling">Traveling</label>
+                            </div>
+                            <div>
+                               <input type="checkbox" id="hobby_cooking" name="hobbies[]" value="Cooking">
+                               <label for="hobby_cooking">Cooking</label>
+                            </div>
+                      </fieldset>
+
+                </fieldset><br>
+
+
+                  <!-- The submit button that sends the form data -->
+                <button type="submit">Upload</button>
+
+
+</body>
+</html>
