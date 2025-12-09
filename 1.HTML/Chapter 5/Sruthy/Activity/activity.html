@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Activity Chapter 5</title>
+</head>
+<body>
+    <header>
+       <h1> My <mark>Semantic</mark> page </h1>
+    </header>
+    <nav>
+    <table width="100%">
+        <tr>
+            <td><a href="#home">Home</a></td>
+            <td><a href="#about">About</a></td>
+            <td><a href="#services">Services</a></td>
+            <td><a href="#contact">Contact</a></td>
+        </tr>
+
+    </table>
+</nav>
+    <section>
+            <h2>Introduction</h2>
+            <p>This page contains the semantic tags used in html</p>
+    </section>
+     
+
+    <article>
+        <h2>My Blog</h2>
+        <p>This is my blog entry. I am learning how to use html semantic tag to make my HTMl well arranged</p>
+        <p><b>Select a document to upload</b> </p><input type="file">
+        <p>File upload progress:</p>
+        <meter value="40" min="0" max="100" id="progressMeter">0%</meter>
+
+        <br><br>
+ 
+        <details><summary>More Info </summary>
+        <p>This hidden section becomes  when you click the arrow. It is useful for FAQs and extra information.</p>
+        </details>
+    </article>
+    
+    <aside>
+        <h3>Did You Know ?</h3>
+        <p>The <mark>aside</mark> tag is used for complementary or tangential content — like sidebars, notes, disclaimers, related links, author info, ads, or contextual extras. </p>
+    </aside><br><br>
+    <h3>Example for semantically  grouping image with its caption:</h3>
+    <figure>
+         <img src="mountain.jpg" alt="mountain view">
+         <figcaption>A beautiful mountain landscape with a beautiful river .</figcaption>
+     </figure><br><br>
+    <section>
+        <h2>Media Section:</h2> 
+        <h3>Listen to this Audio...</h3>
+        <audio  autoplay loop controls>
+        <source src="simple_melody.wav">
+        Your browser does not support audio!!!
+        </audio>
+        <br>
+        <h3>Watch This Video....</h3>
+        <video width="500px" autoplay muted controls>
+            <source src="video.mp4">
+            Your browser does not support this video!!!
+        </video>
+        <!-- <video width="500px" src="video.mp4" controls autoplay muted>
+    Your browser does not support the video tag.
+</video> -->
+        <br>
+    </section><article>
+        <header><h2>This is an header inside an article!!!!!!!! Yes ofcourse You can use a header inside an article tag</h2></header>
+    </article>
+
+   
+
+    <footer>
+        <p>© 2025 Semantic Web Demo</p>
+    </footer>
+</body>
+</html>
