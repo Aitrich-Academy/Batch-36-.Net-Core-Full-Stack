@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Brew & Bite Cafe</title>
+</head>
+<body>
+    <header>
+        <img src="images/unnamed.jpg" align="center" width="60px" >
+        <font color="brown" size="6" face="corrier new"><b><i>Brew and Bite Cafe</i></b>
+        </font>
+        </header>
+        <figure>
+            <img src="images/unnamed.jpg" align="center" alt="coffee cup" >
+            <figcaption>
+                <h2 ><i>Did You Know?</i> </h2>
+                     Coffee beans are actually seeds. What we call “beans” are the seeds inside coffee cherries. 
+                    Each cherry usually contains two seeds, which are dried, roasted, and ground to make your 
+                    brew. <br>
+                     Coffee is the second most traded commodity in the world. After oil, coffee ranks as the most 
+                    globally traded product, with a market value of over $150 billion.<br> 
+            </figcaption>
+        </figure>
+        <form action="placeOrder.php" method="post">
+            <h2>Brew & Bite Cafe - Place Your Order</h2>
+        <table border="1" bordercolor="#f2f2f2" cellspacing="0" cellpadding="10" width="85%">
+            <tr>
+                <th>Items</th>
+                <th>Item Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Select</th>
+                
+            </tr>
+            <tr>
+                <td rowspan="4" >
+                    Pastries & Bakes
+                </td>
+                <td>
+                    Blueberry Muffin 
+                </td>
+                <td>
+                    Freshly baked with real blueberries  
+                </td>
+                <td>
+                    ₹90 
+                </td>
+                <td rowspan="4">
+                    <select name="pastries">
+                        <option value="">--select--</option>
+                        <option value="Blueberry Muffin">Blueberry Muffin</option>
+                        <option value="Chocolate Croissant ">Chocolate Croissant </option>
+                        <option value="Cinnamon Roll ">Cinnamon Roll </option>
+                        <option value="Banana Walnut Loaf ">Banana Walnut Loaf </option>
+                    </select>
+                </td>
+                
+            </tr>
+            <tr>
+                
+                <td>
+                    Chocolate Croissant    
+                </td>
+                <td>
+                    Flaky pastry filled with rich dark chocolate  
+                </td>
+                <td>
+                    ₹110 
+                </td>
+               
+            </tr>
+            <tr>
+                
+                <td>
+                    Cinnamon Roll     
+                </td>
+                <td>
+                    Soft swirl with cinnamon sugar glaze  
+                </td>
+                <td>
+                    ₹95 
+                </td>
+                
+            </tr>
+            <tr>
+             
+                <td>
+                    Banana Walnut Loaf    
+                </td>
+                <td>
+                    Moist banana bread with crunchy walnuts
+                </td>
+                <td>
+                    ₹100 
+                </td>
+             
+            </tr>
+            <tr>
+                <td rowspan="4" >
+                    Coffee & Beverages
+                </td>
+                <td>
+                    Espresso  
+                </td>
+                <td>
+                     Strong and bold single shot    
+                </td>
+                <td>
+                    ₹120
+                </td>
+                <td rowspan="4">
+                    <select name="coffee">
+                        <option value="">--select--</option>
+                        <option value="Espresso">Espresso</option>
+                        <option value="Cappuccino ">Cappuccino </option>
+                        <option value="Latte ">Latte </option>
+                        <option value="Cold Brew ">Cold Brew </option>
+                    </select>
+                </td>
+                
+            </tr>
+            <tr>
+                
+                <td>
+                    Cappuccino    
+                </td>
+                <td>
+                    Rich espresso topped with steamed milk foam   
+                </td>
+                <td>
+                    ₹150 
+                </td>
+               
+            </tr>
+            <tr>
+                
+                <td>
+                    Latte      
+                </td>
+                <td>
+                    Smooth blend of espresso and steamed milk   
+                </td>
+                <td>
+                    ₹160 
+                </td>
+                
+            </tr>
+            <tr>
+             
+                <td>
+                    Cold Brew      
+                </td>
+                <td>
+                    Slow-steeped for 12 hours, served chilled
+                </td>
+                <td>
+                    ₹140 
+                </td>
+             
+            </tr>
+            <tr>
+                <td align="center" colspan="5">
+                    <br>
+                    <br>
+                    <input type="button" value="Place Order">
+                    <br><br>
+
+                </td>
+            </tr>
+
+
+        </table>
+        </form>
+</body>
+</html>
