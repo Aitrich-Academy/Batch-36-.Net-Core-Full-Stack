@@ -1,0 +1,178 @@
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0 !important;
+    position: absolute;
+}
+
+
+.leftside{
+    background-color: rgb(3, 78, 154);
+    height: 900px;
+    width: 20%;
+    position: absolute;
+}
+
+
+ .button1{
+   
+    position:absolute;  
+    margin-left:-33px; 
+    margin-top: 70px; 
+    width: 160px; 
+    height: 40px;
+    text-align: center; 
+    border-radius: 7.5px; 
+    background-color:white;
+}
+
+
+.resume{
+    margin-top: 130px;
+    margin-left: 270px;
+    /* border: 1px solid gray; */
+    outline-style: solid;
+    outline-color: gray;    
+    height:433px;
+    width:370px;
+    outline-width: 1px;
+    border-radius: 4px;
+}
+
+
+.button2{
+    position:absolute;  
+    width: 180px; 
+    height: 45px;
+    text-align: center;
+    color: white; 
+    border-radius: 7.5px; 
+    background-color: rgb(3, 78, 154);
+    margin-left:97px; 
+    margin-top: 230px; 
+    font-size: 14px;
+}
+
+
+.button3{
+    margin-top: 390px;
+    margin-left: 280px;
+    height:30px;
+    width: 30px;
+}
+
+
+.button4{
+    height:30px;
+    width: 30px;
+}
+
+
+.aboutme{
+    margin-top: 10px;
+    margin-left: 270px;
+    outline-style: solid;
+    outline-color: gray;    
+    height:265px;
+    width:370px;
+    outline-width: 1px;
+    border-radius: 4px;
+}
+
+
+.button5{
+    /* position: absolute; */
+    width: 30px;
+    height: 30px;
+    /* text-align: center; */
+    margin-top: 209px;
+    margin-left: 280px;
+}
+
+
+.button6{
+    /* position: absolute; */
+    width:30px;
+    height:30px;
+    /* margin-top: 209px;
+    margin-left: 315px; */
+}
+
+
+
+.skills{
+    margin-left: 660px;
+    margin-top: -708px;
+    outline-style: solid;
+    outline-color: gray;    
+    height:226px;
+    width:570px;
+    outline-width: 1px;
+    border-radius: 4px;
+    position: absolute;
+}
+
+
+.button7{
+    position: absolute;
+    margin-left: 486px;
+    margin-top: 194px;
+}
+
+
+.education{
+    margin-left: 660px;
+    margin-top: -469px;
+    outline-style: solid;
+    outline-color: gray;    
+    height:228px;
+    width:570px;
+    outline-width: 1px;
+    border-radius: 4px;
+    position: absolute;
+}
+
+
+.experience{
+    margin-left: 660px;
+    margin-top: -228px;
+    outline-style: solid;
+    outline-color: gray;    
+    height:228px;
+    width:570px;
+    outline-width: 1px;
+    border-radius: 4px;
+    position: absolute;
+}
+
+
+.secondfooter{
+    position: absolute;
+    background-position:center top; 
+    background-color: rgb(3, 78, 154);
+    height: 280px;
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;    
+}
+
+
+.subscribe{
+   background-color: white; 
+   border-radius: 5px;
+   width: 550px; 
+   height: 45px; 
+   margin-left: 360px; 
+   margin-top: 25px;
+}
+
+
+.footer{
+   position: absolute;
+   margin-top: 350px;
+   margin-left: 70px;
+}
+ 
+      
