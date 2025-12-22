@@ -1,0 +1,176 @@
+
+
+
+
+.nav1 img:hover {
+    opacity: 0.8;
+}
+
+.navright img:hover  {
+    opacity: 0.6;
+}
+
+.navbar li:hover .selected {
+    text-decoration-color: #ffffff;
+}
+.navright{
+    position: absolute;
+    left: 1000px;
+    top: 30px;
+
+}
+.nav1{
+    position: absolute;
+    left: 950px;
+    top: 30px;
+
+}
+.navItem {
+    height: 25px;
+    padding: 10px;
+}
+.leftside li .selected {
+    text-decoration: underline;
+    text-decoration-color: #3487bf;
+    text-decoration-thickness: 4px;
+}
+
+.leftside li:hover {
+    background-color: #3487bf;
+    color: white;
+}
+
+.leftside li:hover a {
+    color: white;
+}
+
+.leftside li:hover .selected {
+    text-decoration-color: #ffffff;
+}
+
+.innerleft button:hover{
+    background-color: rgb(207, 205, 205);
+}
+
+.r1{
+    position: absolute;
+    left: 40px;
+    top: 100px;
+    width: 320px ;
+    height: 350px;
+    border: solid 2px rgb(197, 194, 194);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+.r1 button{
+    background-color: rgb(190, 190, 247);
+    color: rgb(34, 3, 172);
+    border: solid 2px  rgb(199, 199, 236);
+    border-radius: 5px;
+    width: 200px;
+    height: 35px;
+} 
+.r2 {
+    position: absolute;
+    left: 40px;
+    top: 520px;
+    width: 320px ;
+    height: 200px;
+    border: solid 2px rgb(197, 194, 194);
+    border-radius: 10px;
+    padding: 20px;
+
+} 
+.r3 {
+    position: absolute;
+    left: 450px;
+    top: 100px;
+    width: 550px ;
+    height: 175px;
+    border: solid 2px rgb(197, 194, 194);
+    border-radius: 10px;
+    padding: 20px;
+
+} 
+
+.r3 ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.r3 li{
+    color: grey;
+}
+.r4 {
+    position: absolute;
+    left: 450px;
+    top: 350px;
+    width: 550px ;
+    height: 175px;
+    border: solid 2px rgb(197, 194, 194);
+    border-radius: 10px;
+    padding: 20px;
+
+} 
+.r5 {
+    position: absolute;
+    left: 450px;
+    top: 600px;
+    width: 550px ;
+    height: 115px;
+    border: solid 2px rgb(197, 194, 194);
+    border-radius: 10px;
+    padding: 20px;
+
+} 
+.notified{
+    position: absolute;
+    left: 0px;
+    top: 785px;
+    width: 1400px ;
+    height: 250px;
+    background-color: rgb(124, 175, 241);
+    text-align: center;
+    color: white;
+}
+.footer{
+    position: absolute;
+    left: 30px;
+    top: 1050px;
+    width: 1400px ;
+    height: 150px;
+    color: rgb(14, 14, 105);
+    
+}
+.p1{
+    line-height: 1.5;
+}
+.Subscribe{
+    position: absolute;
+    left: 475px;
+    top: 175px;
+    width: 450px ;
+    height: 20px;
+    border: solid 2px rgb(250, 248, 248);
+    border-radius: 10px;
+    background-color: rgb(253, 251, 251);
+    color: grey;
+    padding: 10px ;
+    line-height: 30px;
+    vertical-align: middle;
+}
+.Subscribe button{
+    float: right;
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: #81c9fa;
+    border: solid 2px #81c9fa;
+    border-radius: 5px;
+    /* vertical-align: middle; */
+}
+.email{
+    float: left;
+}
+    

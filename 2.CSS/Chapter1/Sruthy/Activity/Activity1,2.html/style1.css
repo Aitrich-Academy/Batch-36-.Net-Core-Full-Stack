@@ -1,0 +1,14 @@
+body{
+            background-image:url(images/Background1.jpg) ;
+            background-size: cover; 
+            /* background-repeat:repeat-x;  To give bckground horizontal only
+             height: 50px;*/
+             text-align: center;
+             font-size: 4em;
+             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+        p{
+            font-size: medium;
+            font-family: 'Times New Roman', Times, serif;
+        }
