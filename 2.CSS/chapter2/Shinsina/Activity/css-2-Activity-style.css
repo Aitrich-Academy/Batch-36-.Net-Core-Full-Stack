@@ -1,0 +1,282 @@
+  /* Activity#1 */
+        .table1{
+            width:50%;
+            /* border: 1px solid; */
+            border-spacing: 0 10px;
+           
+
+        }
+        .td1,.tr1{
+            background-color: brown;
+            border-radius: 6px;
+            height: 30px;
+            padding: 4px;
+            font-size:x-large;
+        }
+        
+        /* Activity#2 */
+        a:link{
+            text-decoration: none;
+        }
+        a:hover{
+            background-color: yellowgreen;
+            
+        }
+
+        /* Activity#3 */
+        .table2{
+            width:20%;
+            border:1px;
+             border-spacing: 6px;
+              border-collapse: separate;
+        }
+            
+        .th2{
+            background-color: lightgray;
+            border-radius: 3px;
+
+        }
+       
+        .td2{
+           padding: 5px 5px;
+           border-left: 3px solid lightgray;
+           border-right: 3px solid lightgrey;
+   
+        }
+
+        /* Activity#4 */
+        .box{
+            border: 5px solid;
+            height: 200px;
+            width: 270px;
+            font-size: 30px;
+            padding:40px;
+            background-color: lightgray;
+            border-color: blue;
+        }
+
+        /* Activity#5 */
+        img{
+            border: 3px solid;
+            margin-left: 30px;
+            border-radius: 10px;
+        }
+
+        /* Activity#6 */
+        .table3{
+            border: 3px solid blue;
+            width:90%;
+            margin-left: 70px ;
+            margin-bottom: 40px;
+            border-radius: 0px;
+            border-bottom:none;
+            border-right: none;
+        }
+        .td3{
+            font-family:none;
+        }
+        
+        .div1{
+            border: 3px solid;
+            width:70%;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 23px;
+            border-radius: 10px;
+            border-color: blue;
+        }
+        /* Activity#7 */
+        .table4{
+            border: 2px solid;
+            height: 400px;
+            width: 400px;
+
+        }
+
+        /* Activity#8 */
+        .div2{
+            
+            width:100%;
+            border:2px solid;
+            text-align: center;
+            padding-top: 100px;
+            padding-bottom: 50px;
+           
+        }
+
+        .actvty8{
+            width: 600px;
+            height: 50px;
+            
+        }
+        .actvty8::placeholder{
+            color: darkgray;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            padding: 7px;
+
+        }
+        .input2{
+             width: 600px;
+            height: 50px;
+        }
+        .input2::placeholder{
+            color: darkgray;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            padding: 7px;
+        }
+        .input3{
+            margin-left: -459px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 15px;
+            height: 15px;
+            margin-right: 323px;
+           
+
+        }
+        .button8{
+            width: 600px;
+            height: 50px;
+            border:1px solid black;
+            font-size:20px;
+            color:white;
+            background-color: rgb(27, 133, 254);
+            position: absolute;
+            margin-left:-300px;
+
+        }
+
+        /* Activity#10 */
+        .div9{
+            width:100%;
+            height: 500px;
+            size: 1000px 600px;
+            border: 2px solid;
+            
+        }
+        .leftside{
+            width: 25%;
+            height: 500px;
+            background-color: rgb(13, 13, 117); 
+            font-size: x-large;
+            color: white;
+            margin: 0px;
+             text-align: justify;
+            
+             
+          }
+
+         .ul9{
+           position: absolute;
+           margin-top: 120px;
+           color: white;
+          }
+           .ul9 img{
+            border:none;
+        } 
+        .right{
+              border: 1px solid;
+              width:700px;
+              margin-top: -470px;
+              margin-left: 400px;
+              text-align: center;
+        }
+        
+        /* Activity#11 */
+        .form11 label{
+              display: block;
+        }
+        .form11 input[type=text], select {
+              width: 50%;
+              padding: 12px;
+              margin: 8px 0;
+              display: inline-block;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+              background-color: #ccc;
+        }
+        .card {
+            background: #fff;
+            width: 80%;
+            border: 2px solid #090909;
+            border-radius: 6px;
+            padding: 20px;
+        }
+
+        .profile-header {
+           
+            
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .profile-header img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        .profile-header h3 {
+            
+            font-size: 28px;
+        }
+
+        h4 {
+          
+            font-size:23px;
+        }
+
+        .description {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            flex: 1;
+        }
+
+        label {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+         input, textarea { 
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #595656;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        textarea {
+            /* resize: none; */
+            height: 90px;
+        }
+
+        .btn {
+            margin-top: 15px;
+            background: #7b3ff2;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .btn:hover {
+            background: #692fe0;
+        }
