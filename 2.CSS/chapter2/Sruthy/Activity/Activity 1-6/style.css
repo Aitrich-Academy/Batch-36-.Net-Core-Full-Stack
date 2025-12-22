@@ -1,0 +1,33 @@
+.box4{
+    width:300px;
+    height:150px;
+    line-height: 100px;
+    padding-left:20px;
+    font-size: larger;
+    background-color: rgb(230, 226, 226);
+    border: solid 3px rgb(81, 167, 247);
+}
+.img_js{
+    margin-left: 30px;
+    border: solid 4px rgb(100, 187, 245);
+}
+.decor{
+    width: 650px;
+    height: 200px;
+    border: solid 2px rgb(187, 185, 185);
+}
+.decorIn{
+    margin: 25px;
+    width: 600px;
+    height: 150px;
+    border-radius: 5px;
+    text-align: center;
+    border: solid 3px rgb(92, 155, 238);
+}
+.inner{
+    margin: 25px;
+    width: 550px;
+    height: 25px;
+    border-top: solid 3px rgb(92, 155, 238);
+    border-left: solid 3px rgb(92, 155, 238);
+}

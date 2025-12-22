@@ -13,6 +13,7 @@
             color: white;
             padding-top: 40px;
            
+
         }
         .profile img{
              z-index: 1;
@@ -25,8 +26,8 @@
             margin-top: -26px;
             background-color: chartreuse;
             font-size:17px;
-            z-index: 2;
-            
+            /* z-index: 2; */
+            position: absolute;
         }
         .profile p{
             font-size: 17px;
