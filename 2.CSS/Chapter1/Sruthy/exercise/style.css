@@ -1,0 +1,107 @@
+.main{
+    margin: 0;
+    padding: 0;
+}
+.leftTop{
+    margin-left: 175px;
+    position: absolute;
+    width: 450px;
+    height: 550px;
+
+}
+.rightTop{
+    position: absolute;
+    left: 650px;
+    width: 660px;
+    height: 475px;
+    background-color: rgb(105, 181, 243);
+    border-radius: 35px;
+    margin-right: 300px;
+
+}
+.jobsearch{
+   
+   width: 425px;
+    height: 55px ;
+    line-height: 50px;
+    color: rgb(56, 56, 114);
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    padding-left: 20px;
+   
+}
+.button1{
+    position: absolute;
+    left: 320px;
+    top: 425px;
+    text-align: center; 
+    line-height: 40px;   
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    color: white;
+    background-color: rgb(105, 181, 243);
+}
+.button_land{
+   position: absolute;
+   left: 0px;
+    top: 500px;
+    width: 210px;
+    height: 40px ;
+    line-height: 40px;
+    color: white;
+    background-color: rgb(97, 248, 142);
+    border-radius: 5px;
+    padding-left: 20px;
+    
+}
+.button_recruit{
+    position: absolute;
+    left: 235px;
+    top: 500px;
+    text-align: center; 
+    line-height: 40px;   
+    width: 210px;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(97, 248, 142);
+}
+.imageGirl{
+   left: 25%;
+   top: 32%;
+    width: 350px;
+    height: 325px;
+  background-image:url(images/girlright.png);
+     position: absolute;
+        
+
+}
+.box{
+    align-items: center;
+}
+.box1 {
+  display: inline-block;   /* key line */
+  width: 200px;
+  height: 165px;           /* equal = square */
+  background: #eafaf9;
+  margin: 10px;
+  color: rgb(95, 94, 97);
+  
+    /* line-height: 100px;      vertical centering */
+  border-radius: 5px;
+}
+
+.boxfooter {
+  display: inline-block;   /* key line */
+  width: 200px;
+  height: 100px;           /* equal = square */
+  background: #eafaf9;
+  margin: 10px;
+  color: rgb(95, 94, 97);
+  /* text-align: center; */
+    /* line-height: 100px;      vertical centering */
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-left: 15px;
+}

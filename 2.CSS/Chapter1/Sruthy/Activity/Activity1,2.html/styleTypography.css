@@ -1,0 +1,18 @@
+.underline{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+}
+.bold{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.deleted{
+    font-family: sans-serif;
+    text-decoration: line-through;
+
+}
+.italic
+{
+    font-family: sans-serif;
+    font-style: italic;
+}

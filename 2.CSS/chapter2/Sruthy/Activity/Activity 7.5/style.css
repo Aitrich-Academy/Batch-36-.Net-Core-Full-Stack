@@ -1,0 +1,27 @@
+.main{
+    width: 400px;
+    height: 475px;
+    border: solid 2px rgb(185, 184, 184);
+    margin: 100px;
+    padding-left: 20px;
+}
+hr{
+    color: rgb(206, 204, 204);
+}
+textarea{
+    width: 375px;
+    height: 150px;
+    border: solid 1px rgb(197, 196, 196);
+}
+input[type="submit"] {
+    color: rgb(253, 251, 253);
+    background-color: rgb(154, 94, 211);
+    border: solid 2px rgb(166, 116, 189);
+    border-radius: 5px;
+    height: 30px;
+}
+input[type="text"] {
+    border: solid 1px rgb(197, 196, 196);
+    height: 25px;
+    border-radius: 5px;
+}

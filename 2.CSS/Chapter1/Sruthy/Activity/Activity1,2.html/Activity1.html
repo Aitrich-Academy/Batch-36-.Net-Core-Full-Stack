@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styleTypography.css">
+<style>
+.box {
+    /* background-color: #31a24c;   */
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    margin:  auto; 
+}
+#backgroundBox{
+  width: 300px;
+  height: 150px;
+  border: 2px solid black;
+
+  background-image: url(images/backgroundBox.jpg);/* path to your image */
+  background-repeat: no-repeat;       /* prevents repeating */
+  background-position: center;        /* position: top, bottom, left, right, center */
+  background-size: cover;
+  position: absolute;
+    top: 25%;
+    left: 0%;      
+}
+#outer{
+    width: 500px;
+  height: 350px;
+    background-color: darkgray;
+    align-items: center;
+    position: relative ;
+
+}
+#innerBox{
+    width: 140px;
+  height: 250px;
+  background-color: rgb(169, 228, 228);
+     position: absolute;
+    top: 10%;
+    left: 0%; 
+    outline-style: solid;
+    margin:2px;
+    padding-left: 10px;
+    padding-right: 5px;
+        
+
+}
+
+</style>
+</head>
+<body>
+    <h1>#1</h1><br>
+    <div class="box" style="background-color: green;">Platform Admin</div><br>
+    <div class="box" style="background-color:red;">Job Provider</div><br>
+    <div class="box" style="background-color:yellow;">Job Seeker</div><br>
+    <h1>#3</h1><br>
+
+    <DIV id="outer">
+    <div id="backgroundBox"></div>
+    <div id="innerBox">
+        <br><br><br>
+        <font size="4">Job Seeker</font>
+        <br><br><br>
+        <p>Enthusiastic Jobseeker eager to contribute and learn in a dynamic work environment</p>
+    </div>
+    </DIV>
+    <h1>#4</h1><br>
+    <p class="underline">Job Provider</p>
+    <p class="bold">Job Provider</p>
+    <p class="deleted">Job Provider</p>
+    <p class="italic">Job Provider</p>
+
+</body>
+</html>
