@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+          
+        }
+        .leftside{
+            position: absolute;
+            padding: 30px;
+            padding-top: 50px;
+            width: 18%;
+            height: 120%;
+            background-color: rgb(35, 142, 192);
+            color: white;
+            text-align: center;
+
+         }
+         .leftside h1{
+          
+            animation: slide-left-to-right 4s ease-out forwards infinite; 
+          
+          display: inline-block; 
+            
+   
+         }
+     
+        @keyframes slide-left-to-right {
+           
+            0%,100%{
+                transform: translateX(-40px); 
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateX(40px);
+                opacity: 1;
+            }
+        }
+       
+         .listdiv:hover{
+     
+        background-color:white;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius:15px ;
+       
+        width: 227px;
+        color: black;
+     
+       
+    
+    }
+
+         ul{
+            position: absolute;
+            color: white;
+            padding-left: 30px;
+            padding-top: 80px;
+            text-align: left;
+        }
+         ul img{
+            height: 25px;
+            width: 25px;
+            margin-right: 15px; 
+        }
+
+        .addnew{
+            margin-top: 490px;
+            /* margin-left: 70px; */
+        }
+        .rightside{
+            background-color: white;
+            height: 580px;
+            margin-left: 287px;
+            padding: 15px;
+            /* border-top-left-radius: 50px;   */
+        }
+        .nav{
+
+            /* position: absolute; */
+            background-color: white;
+            padding: 10px;
+            margin-left: -30px;
+            width: 100%;
+            text-align: right;
+            border-bottom: 1px solid;
+        }
+            
+        
+        .nav img{
+            width: 40px;
+            height: 40px;
+        }
+
+        .card{
+            margin-top: 100px;
+            margin-left: 100px;
+            border: 0px solid;
+            height: 90%;
+            width: 75%;
+            border-radius: 50px;
+            text-align: center;
+            display:flex;
+            justify-content:center;
+            /* align-items:center; */
+            box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+           
+        }
+        .card-detail{
+            /* background-color: antiquewhite; */
+            /* border:2px solid; */
+            border-top-color: rgb(183, 205, 232);
+            width: 80%;
+            margin-top: 0px;
+            margin-left: 40px;
+            text-align: left;
+          
+        }
+           .form11 label{
+              display: block;
+              
+        }
+        .form11 input[type=text], select {
+
+
+        
+              width: 100%;
+              padding: 12px;
+              margin: 8px 0;
+              display: inline-block;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+              background-color: #e9f0fa;
+        }
+        .card-bottom{
+            margin-top: 40px;
+            margin-left: 40px;
+            gap: 30px;
+            display: flex;
+            border: 0px solid;
+            width: 80%;
+            height: 35px;
+            gap: 83px;
+        }
+        .card-bottom button{
+            height: 35px;
+            width: 70px;
+            background-color: rgb(77, 77, 215);
+            color: white;
+            border: none;
+            border-radius: 9px;
+        }
+        .footer
+        {   position: absolute;
+            background-color: rgb(35, 142, 192);
+            border: 0px solid;
+            width: 100%;
+            height: 232px;
+            /* margin-left: 285px; */
+            margin-top: 150px;
+            background-image: url(images/Decoration.png);
+            color: white;
+            /* font-style: italic; */
+            /* font-size: 38px; */
+              display:flex;
+           /* justify-content:center;
+            align-items:center; */
+        }
+        .footer h1{
+              margin-left: 270px;
+              margin-top: 100px;
+           
+              font-style: italic;
+        }
+         .footer img{
+            height: 80px;
+            width: 80px;
+       
+             
+        } 
+        .footer-images{
+            margin-left: 270px;
+            margin-top: 80px;
+             
+        }
+        .image1{
+             animation: slideIn 1.9s ease-out forwards infinite;
+        }
+
+         @keyframes slideIn {
+            0%,100% {
+                transform: translateX(-50px);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        .image2{
+             animation: slideOut 1.9s ease-out backwards infinite;
+        }
+         @keyframes slideOut {
+            0%,100% {
+                transform: translateX(50px);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="leftside">
+        <h1>Hire Me Now!!!</h1>
+        <ul type="none">
+            <li  class="listdiv"><img src="images/dashboard 1.png" alt="dashboard img"align="center">Dashboard</li>
+            <br>
+            <br>
+            <li  class="listdiv"><img src="images/suitcase 2.png" alt="suitcase img"align="center">Jobs</li>
+             <br>
+            <br>
+            <li  class="listdiv"><img src="images/application (1) 1.png" alt="applctn img"align="center">Applications</li>
+             <br>
+            <br>
+            <li  class="listdiv"><img src="images/question (1) 1.png" alt="intrvw img"align="center">Interviews</li>
+             <br>
+            <br>
+            <li class="listdiv"><img src="images/message 1.png" alt="mssg img"align="center"> Messages</li>
+             <br>
+            <br>
+            <li class="listdiv"><img src="images/settings 1.png" alt="settings img"align="center">Settings</li>
+        </ul>
+
+        <div class="addnew">
+            <img src="images/add-group (1) 1.png">
+            <div class="new"><a><h3>Add New</h3></a></div>
+        </div>
+
+    </div>
+
+    <div class="rightside">
+        <div class="nav">
+            <img src="images/notification-bing.png" alt="bell img" align="center">
+            <img src="images/cheerful.png" alt="girl img"align="center">Olivia
+        </div>
+
+        <div class="card">
+            <div style=" border-top:2px solid;border-top-color:rgb(189, 196, 196);width: 90%;margin-top: 50px;padding-top: 50px;">
+             <div class="card-detail">
+                <form class="form11">
+                 <label for="jobtitle">Job Title</label>
+                 <input type="text"id="jobtitle"name="jobtitle"placeholder="Enter Job Title">
+                 <label for="descriptn">Description</label>
+                 <input type="text"id="descriptn"name="descriptn"placeholder="Enter Description">
+                 <label for="salry">Salary</label>
+                 <input type="text"id="salry"name="salry"placeholder="Enter Salary">
+                  <label for="location">Location</label>
+                 <input type="text"id="location"name="location"placeholder="Enter Location">
+            </form>
+             </div>
+             
+             <form  class="card-bottom">
+                <div><button type="submit">Send</button></div>
+                <div> Push Notification<input type="checkbox"></div>
+                <div>  Email Notification<input type="checkbox"></div>
+            </form>
+        
+        </div>
+
+        </div>
+
+    </div>
+    <div class="footer">
+       <div> <h1>Get Your Dream Job...........</h1></div>
+        <div class="footer-images">
+            <img class="image1" src="images/home-button 4.png" alt="home img">
+            <img class="image2" src="images/calendar (2) 2.png" alt="calender img">
+        </div>
+       
+    </div>
+</body>
+</html>
