@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        /* background-color: rgb(200, 230, 232); */
+        text-align: center;
+        margin-top: 80px;
+        animation: opacity 2.5s ease-out forwards ;
+        background-image: linear-gradient( to right, rgb(157, 226, 231),rgb(4, 114, 122));
+    }
+     @keyframes opacity {
+            0% {
+                transform: translateX(0px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+    
+    
+    h1{
+        color: rgb(85, 116, 117);
+        font-size: 60px;
+        animation: pulse 2.0s ease-in-out ;
+
+    
+    }
+     @keyframes pulse {
+            0% {
+                transform: scale(.9);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(.9);
+            }
+        }
+
+
+    .nav{
+        display: flex;
+        text-align: center;
+        gap: 70px;
+        margin-left: 420px;
+        margin-top: 30px;
+        color: rgb(57, 57, 227);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+
+    }
+    .nav1:hover{
+        /* height: 20px; */
+        /* width: 60px; */
+        /* text-align: center;  */
+        background-color: blue;
+        color: white;
+        border-radius: 7px;
+    }
+
+
+    .cards{
+        display: flex;
+        gap: 10px;
+        margin-left: 240px;
+        margin-top: 40px;
+        animation: slideIn 2.5s ease-out forwards ;
+       
+        
+    }
+     @keyframes slideIn {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+    .cards img{
+        border-radius: 5px;
+        height: 250px;
+        width: 230px;
+        padding-top: 10px;
+        
+    }
+    .card-1{
+        border: 0px solid;
+        height: 370px;
+        width: 250px;
+        background-color:rgb(207, 241, 243);
+        border-radius: 7px;
+
+    }
+    .table{
+        border: 0px solid;
+        width: 95%;
+        height: 180px;
+        margin-left: 30px;
+       
+      
+        
+    }
+    th{
+        background-color: rgb(15, 64, 57);
+        color: white;
+         /* border-top-left-radius: 9px; */
+         /* border-top-right-radius: 9px; */
+    }
+    td{
+        background-color: white;
+        border-bottom: 1px solid #ddd;
+    }
+    .th1{
+         border-top-left-radius: 9px;
+    }
+    .th2{
+        border-top-right-radius: 9px;
+    }
+    .td1{
+     border-bottom-left-radius: 9px;
+    }
+    .td2{
+     border-bottom-right-radius: 9px;
+    }
+    
+    .footer{
+        margin-top: 20px;
+        border: 0px solid;
+        width: 25%;
+        height: 120px;
+        margin-left: 470px;
+        border-radius: 9px;
+        background-image: linear-gradient(to right, rgb(157, 226, 231),rgb(93, 223, 93));
+         animation: pulse 2.0s ease-in-out infinite;
+    
+    }
+     @keyframes pulse {
+            0% {
+                transform: scale(.9);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(.9);
+            }
+        }
+    .footer img{
+        width: 300px;
+        height: 100px;
+        padding-top: 9px;
+        border-radius: 5px;
+       
+    }
+    
+
+
+</style>
+
+</head>
+<body>
+    <h1>CODEVERSE 2025</h1>
+    
+    <div class="nav">
+        <div class="nav1">About</div>
+        <div class="nav1">Speakers</div>
+        <div class="nav1">Scedule</div>
+        <div class="nav1">Register</div>
+    </div>
+
+    <h2>Featured Speakers</h2>
+
+    <div class="cards">
+        <div class="card-1">
+            <img src="images/unnamed (1).jpg" alt="girl img">
+            <h3>Dr Aysha Khan</h3>
+            <p>AI Ethics & Governance</p>
+        </div>
+        <div class="card-1">
+            <img src="images/unnamed (2).jpg"  alt="girl img">
+            <h3>Soumya S.</h3>
+            <p>Full Stack Development</p>
+        </div>
+        <div class="card-1">
+            <img src="images/unnamed (3).jpg" alt="boy img">
+            <h3>Rajiv Menon</h3>
+            <p>Cloud architecture</p>
+         </div>
+    </div>
+
+    <h2>Event Scedule</h2>
+
+    <table class="table" cellspacing="0px">
+          <tr>
+            <th class="th1">TIME</th>
+            <th>SESSION</th>
+            <th class="th2">SPEAKER</th>
+          </tr>
+          <tr>
+            <td>10:00 AM</td>
+            <td>Opening Keynote</td>
+            <td>Dr Aysha Khan</td>
+          </tr>
+          <tr>
+            <td>11:30 AM</td>
+            <td>Building Scalable Web Apps</td>
+            <td>Soumya S.</td>
+          </tr>
+          <tr>
+            <td class="td1">2:00 PM</td>
+            <td>Cloud Native Strategies</td>
+            <td class="td2">Rajiv Menon</td>
+          </tr>
+    </table>
+
+    <div class="footer">
+        <img src="images/unnamed.jpg" alt="regstr now img">
+    </div>
+</body>
+</html>
