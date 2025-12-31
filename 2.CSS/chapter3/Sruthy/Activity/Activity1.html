@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Chapter 3 Activity</title>
+    <style>
+        .box1{
+            margin: 50px;
+            width: 200PX;
+            height: 150px;
+            background-color: rgb(72, 114, 148);
+            transform: rotate(45deg);
+
+        
+        }
+        .box2{
+            margin: 100px;
+            width: 200PX;
+            height: 150px;
+            background-image: url(images/raindrop.jpg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            transition: transform 2s ease;
+        }
+        .box2:hover
+        {
+            transform: scale(2,2);
+        }
+        .skew-btn {
+            padding: 12px 30px;
+            background-color: rgb(114, 218, 212);
+            border:rgb(114, 218, 212);
+            color: white;
+            transform: skewX(-15deg) skewY(-3deg);
+        }
+        .box3{
+            margin: 50px;
+            width: 200PX;
+            height: 150px;
+            background-color: rgb(134, 207, 86);
+            transition: transform 2s ease-in-out;
+            transform-origin: top left;
+        }
+        .box3:hover{
+            transform: translate(100px, 50px);
+        }
+        .card {
+            width: 200px;
+            height: 120px;
+            background-color: #374e23;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 500px;
+            transition: transform 2s ease;
+        }
+        
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+        .card1 {
+            width: 200px;
+            height: 75px;
+            background-color: #374e23;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* perspective: 500px; */
+            transition: transform 5s ease;
+        }
+        .card1:hover {
+            background-color: aquamarine;
+        }
+        .colorBtn{
+            background : blueviolet;
+            color: white;
+            padding: 10px 20px;
+            transition : background-color 0.5s
+        }
+        .colorBtn:hover{
+            background: rgb(44, 44, 245);
+        }
+        .box7{
+            margin: 100px;
+            height: 75px;
+            width: 100px;
+            background-color: aquamarine;
+            transition: transform 2s;
+        }
+        .box7:hover{
+            transform:scale(2,2);
+        }
+        .box8{
+            margin: 50px;
+            height: 100px;
+            width: 100px;
+            border: solid 2px green;
+            background-color: aquamarine;
+            transition: border-color 1s ease,border-width 1s ease;
+        }
+        .box8:hover{
+            border: solid 10px red;
+        }
+        .imgOpa{
+            margin: 20px;
+            height: 250px;
+            width: 150px;
+            opacity: 1;
+            transition: opacity 2s ease;
+
+        }
+        .imgOpa:hover{
+            opacity: 0.3;
+        }
+        .btnTrans{
+            margin: 20px;
+            padding: 15px 25px;
+            background-color: rgb(190, 96, 96);
+            border-radius: 5px;
+            font-size: 10px;
+            transition: background-color, font-size  ease;
+        }
+        .btnTrans:hover{
+            background-color: rgb(230, 56, 56);
+            font-size: 15px;
+        }
+        .ball{
+            margin: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            border-radius: 50px;
+            animation: bounce 1s infinite ease-in-out;
+        }
+        @keyframes bounce{
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-100px); }
+            100% { transform: translateY(0); }
+        }
+        .spinner{
+            width: 100px;
+            height: 100px;
+            border: 4px solid rgb(214, 208, 208);
+            border-radius: 50px;
+            border-top: 4px red;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin{
+            from {transform: rotate(0deg);}
+            to{transform:rotate(360deg);}
+        }
+        .fadeInout{
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            animation: fade 0.5s infinite ease-in-out;
+        }
+        @keyframes fade{
+            from{opacity:0.2;}
+           to{opacity : 1;} 
+        }
+        /* .slideText{
+            width: 500px;
+            height: 50px;
+            color: red;
+            font-weight: bold;
+            animation: slide 5s infinite ease-in-out;
+        }
+        @keyframes slide{
+            from{transform: translateX(0px);}
+            to{transform: translateX(1000PX);}
+        } */
+         .slideText {
+            display: inline-block;
+            font-size: 30px;
+            color: red;
+            font-weight: bold;
+            animation: slide 5s infinite ease-in-out;
+        }
+
+        @keyframes slide {
+            
+            to {
+                transform: translateX(700px);
+            }
+        }
+        .circle{
+            margin: 100px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(165, 155, 15);
+            animation: changeSize 5s infinite ease-in-out;
+        }
+        @keyframes changeSize{
+            0%{transform: scale(1,1);}
+            50%{transform:scale(2,2);}
+            100%{transform: scale(1,1);}
+        }
+        .ripple{
+            position: relative;
+            padding: 15px 35px;
+            background-color: rgb(43, 96, 243);
+            color: white;
+            border: none;
+            /* overflow: hidden; */
+        }
+        .ripple::after{
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgb(235, 229, 229);
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%) scale(0);
+        }
+        .ripple:hover::after{
+            animation: ripple 1s infinite ease-out;
+        }
+        @keyframes ripple {
+            from {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 1;
+            }
+            to {
+                transform: translate(-50%, -50%) scale(6);
+                opacity: 0;
+            }
+        }
+        .cube3D{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 500px;
+
+        }
+        .scene {
+            perspective: 600px;
+        }
+
+        .cube {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            transform-style: preserve-3d;
+            animation: rotateCube 4s infinite linear;
+        }
+
+        .face {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(52, 152, 219, 0.8);
+            border: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        /* Cube faces */
+        .front  { transform: translateZ(50px); }
+        .back   { transform: rotateY(180deg) translateZ(50px); }
+        .right  { transform: rotateY(90deg) translateZ(50px); }
+        .left   { transform: rotateY(-90deg) translateZ(50px); }
+        .top    { transform: rotateX(90deg) translateZ(50px); }
+        .bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+        /* Animation */
+        @keyframes rotateCube {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+        .slider {
+            width: 600px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 100%;
+            animation: slide1 12s infinite;
+        }
+
+        /* Delay each image */
+        .slider img:nth-child(1) { animation-delay: 0s; }
+        .slider img:nth-child(2) { animation-delay: 3s; }
+        .slider img:nth-child(3) { animation-delay: 6s; }
+        .slider img:nth-child(4) { animation-delay: 9s; }
+        @keyframes slide1 {
+            0%   { left: 100%; }
+            10%  { left: 0; }
+            30%  { left: 0; }
+            40%  { left: -100%; }
+            100%  { left: -100%; }
+        }
+        .menu {
+            background: #616060;
+            padding: 15px;
+            display: flex;
+            width: 100%;
+            /* text-align: center; */
+        }
+
+        .menu a {
+            flex: 1;
+            color: white;
+            text-decoration: none;
+            padding: 5pxpx 0 ;
+            transition: transform 0.3s ease;
+        }
+
+        .menu a:hover {
+            transform: translateY(-8px);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>#1</h1>
+    <div class="box1">
+    </div>
+    <h1>#2</h1>
+    <div class="box2">
+    </div>
+    <h1>#3</h1>
+    <button class="skew-btn">click Me</button>
+    <br><br>
+    <h1>#4</h1>
+    <div class="box3"></div>
+    <h1>#5</h1>
+    <div class="card">3D Card</div>
+    <br>
+    <h1>#6</h1>
+    <button class="colorBtn">Check</button>
+    <br>
+    <h1>#7</h1>
+    <div class="box7"></div>
+    <br>
+    <h1>#8</h1>
+    <div class="box8"></div>
+    <br>
+    <h1>#9</h1>
+    <img class="imgOpa" src="images/parrot.jpg">
+    <br>
+    <h1>#10</h1>
+    <button class="btnTrans">Click</button>
+    <br>
+    <h1>#11</h1>
+    <div class="ball"></div>
+    <br>
+    <h1>#12</h1>
+    <div class="spinner"></div>
+    <br>
+    <h1>#13</h1>
+    <img class="fadeInout" src="images/new.png">
+    <br>
+    <h1>#14</h1>
+    <div class="slideText">sliding......</div>
+    <br>
+   
+    <h1>#15</h1>
+    <div class="circle"></div>
+    <br>
+    <h1>#16</h1>
+    <div class="card">FLIP</div>
+    <BR>
+    <h1>#17</h1>
+    <button class="ripple">CLICK</button>
+    <br>
+    <h1>#18</h1>
+    <div class="cube3D">
+        <div class="scene">
+            <div class="cube">
+                <div class="face front">1</div>
+                <div class="face back">2</div>
+                <div class="face right">3</div>
+                <div class="face left">4</div>
+                <div class="face top">5</div>
+                <div class="face bottom">6</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h1>#19</h1>
+    <div class="slider">
+        <img src="images/1.jpeg">
+        <img src="images/2.jpg">
+        <img src="images/3.jpg">
+        <img src="images/4.jpg">
+    </div>
+    <br>
+    <h1>#20</h1>
+    <nav class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+
+</body>
+</html>
