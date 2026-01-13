@@ -1,0 +1,136 @@
+
+.code{
+    margin: 50px;
+    text-align: center;
+    color:rgb(46, 46, 46);
+    font-size: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(87, 86, 86);  
+    animation: changeSize 5s ease-in-out;
+    /* transition: transform; */
+}
+@keyframes changeSize{
+    0%{transform:scale(1.5);}
+    100%{transform:scale(1);}
+}
+.tab{
+    margin-left: 400px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    gap: 55px;
+    font-weight: bold;
+    font-size: larger;
+    color: rgb(22, 66, 148);
+}
+.tab p{
+    text-align: center;
+    width:100px;
+    height: 50px;
+    border-radius: 10px;
+    transition: background-color, font-size  ease;
+}
+.tab p:hover{
+    background-color: rgb(51, 123, 218);
+    font-size: 20px;
+    color: white;
+}
+.featured{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.img-container{
+    text-align: center;
+    display: flex;
+    gap: 25px;
+    animation: slide 2s ease-in-out forwards;
+}
+@keyframes slide{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
+.img1{
+    margin-left: 350px;
+    width: 200px;
+    height: 250px;
+    background-color: rgb(192, 225, 233);
+    text-align: center;
+    border-radius: 10px;
+    
+}
+.img2{
+    width: 200px;
+    height: 250px;
+    background-color: rgb(192, 225, 233);
+    text-align: center;
+    border-radius: 10px;
+   
+}
+.picture{
+    margin: 12px;
+    width: 175px;
+    height: 225px;
+    border-radius: 10px;
+}
+.schedule{
+    margin: 0px;
+    position: absolute;
+    left: 190px;
+    text-align: center;
+    width: 975px;
+    height: 160px;
+    background-color: white;
+}
+table{
+    margin: 0px;
+    width: 100%;
+    border-radius:10px;
+    border-collapse: collapse;
+ 
+}
+table th{
+    background-color: rgb(66, 66, 66);
+    border-color: ( rgb(66, 66, 66));
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+table th,td{
+    padding: 2px;
+    text-align: center;
+}
+.register{
+    position: absolute;
+    text-align: center;
+    top: 800px;
+    left: 500px;
+    border: 2px rgb(78, 247, 154);
+    background-color:rgb(78, 247, 154) ;
+    width: 250px;
+    height: 75px;
+    border-radius: 10px;
+    animation: changeSize 2s infinite ease-in-out;
+
+}
+.img-register
+{
+    width: 225px ;
+    height: 75px;
+    /* animation: changeSize 5s infinite ease-in-out; */
+ }
+        @keyframes changeSize{
+            0%{transform: scale(1,1);}
+            50%{transform:scale(1.1,1.1);}
+            100%{transform: scale(1,1);}
+        }
+
