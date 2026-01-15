@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0px;
+           
+            
+        }
+        .leftside{
+             position: absolute;
+             padding-top: 30px;
+             text-align: center;
+             background-color: #f7f7fc;
+             width:45%;
+             height: 530px;
+        }
+        .header{
+            
+            margin-left: -100px;
+        }
+        .slider-wrapper {
+            border: 0px solid;
+           width: 570px; /* Adjust width as needed */
+           height: 440px;
+           overflow: hidden;
+            margin: auto;
+           /* border-radius: 10px; */
+        } 
+        .slider img {
+             padding-top: 40px;
+             width: 50%;
+             height: 390px;
+        }
+       
+        .slider {
+              display: flex;
+              width: 400%; /*Total width for 4 images (3 originals + 1 loop) */
+              animation: slide 12s infinite ease-in-out;
+            }
+
+        @keyframes slide {
+           0% { transform: translateX(0); }
+           25% { transform: translateX(0); }       /* Stay on Image 1 */
+           33% { transform: translateX(-25%); }    /* Slide to Image 2 */
+           58% { transform: translateX(-25%); }    /* Stay on Image 2 */
+           66% { transform: translateX(-50%); }    /* Slide to Image 3 */
+           91% { transform: translateX(-50%); }    /* Stay on Image 3 */
+           100% { transform: translateX(-75%); }   /* Slide to Loop Image */
+        }
+     
+        .rightside{
+            background-color: white;
+            height: 530px;
+            margin-left: 587px; 
+            padding: 55px;
+            padding-top: 100px;
+             border:0px solid;  
+             width: 40%;
+        }
+        .form{
+            display: grid;
+        }
+        table,tr,td{
+            border: 0px solid;
+        }
+        .table{
+            width: 80%;
+            height: 300px;
+        }
+        .forgot{
+            padding-top: 30px;
+            text-align: right;
+            color: cadetblue;
+        }
+        .button{
+             width: 394px;
+            height: 40px;
+            color: white;
+            background: #5541D7;
+            border-radius: 8px;
+        }
+        .textbox{
+            width: 388px;
+            height: 23px;
+            border: 1.5px solid;
+            border-color: #261691;
+            border-radius: 5px;
+        }
+         table img{
+            position: absolute;
+            margin-left:-30px;
+            margin-top: 4px;
+        }
+        .label{
+            font-weight: bold;
+        }
+
+
+
+
+       
+ </style>
+
+</head>
+<body>
+   <div class="main">
+
+       <div class="leftside">
+            <div class="header">
+                <img src="images/Group 8.png">
+                <img src="images/Hire me Now.png" style="position: absolute;margin-top: 20px;margin-left: 20px;">
+            </div>
+
+
+            
+             <div class="slider-wrapper">
+               <div class="slider">
+                  <img src="images/Group.png" alt="Slide 1">
+                  <img src="images/Group.png" alt="Slide 2">
+                  <img src="images/Group.png" alt="Slide 3">
+                 <!-- Duplicate first image for a seamless loop -->
+                 <img src="images/Group.png" alt="Slide 1 Loop">
+                </div>
+             </div>
+       </div>
+     <div class="rightside">
+        <h2>Sign in to Admin Dashboard</h2>
+         <form class="form">
+               <table class="table">
+                <tr>
+                    <td>
+                        <label class="label" for="email">Email</label><br>
+                        <input class="textbox" type="email"id="email"name="email"placeholder=" input your email in here" >
+                        <span id="error-email"></span>
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label  class="label" for="password">Password</label><br>
+                        <input class="textbox" type="password"id="password"name="password"placeholder="  input your password in here" >
+                        <span id="error-password"></span>
+                        
+                      
+                        <img src="images/eye-no.png"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="forgot"><span>Forgot password?</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button" type="submit">Sign In</button>
+                    </td>
+                </tr>
+                </table>
+            </form>
+        
+        </div>
+   </div>
+
+  <script src="script.js"></script>
+</body>
+  
