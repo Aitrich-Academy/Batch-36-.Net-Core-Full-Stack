@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  .highlight {
+    border: 2px solid red;
+    padding: 10px;
+    background-color: yellow;
+  }
+</style>
+
+
+</head>
+<body>
+    <h1 id="title">Old Heading</h1>
+<p id="para">This is <b>bold</b> text.</p>
+<img id="myImage" src="cat.jpg" alt="cat Image">
+ <h2>My Shopping List</h2>
+  <ul id="shoppingList"></ul> 
+
+
+
+    <script>
+         document.getElementById("title").innerHTML = "New Heading";
+         document.getElementById("para").textContent = "This is plain text now.";
+
+  const image = document.getElementById("myImage");
+  image.setAttribute("src", "dog.jpg");   // change image source
+  image.setAttribute("class", "highlight"); // add a CSS class
+   // Step 1: Get the <ul> element
+    const list = document.getElementById("shoppingList");
+
+    // Step 2: Create an array of items
+    const items = ["Milk", "Bread", "Eggs", "Butter"];
+
+    // Step 3: Loop through items and add them to the list
+    items.forEach(function(item) {
+      const li = document.createElement("li"); // make <li>
+      li.textContent = item;                   // add text inside
+      list.appendChild(li);                    // attach to <ul>
+    });
+
+    </script>
+</body>
+</html>
