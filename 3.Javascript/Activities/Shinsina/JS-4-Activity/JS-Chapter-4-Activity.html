@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    // 1
+     let myString="Hello";
+    console.log("Q1"+" "+myString[0]); 
+
+    // 2
+    let myNumber = 150;
+    const status = myNumber > 100 ? "Greater than 100" : " less than 100";
+    console.log("Q2"+" "+status);
+
+    // 3
+    console.log("Q3"+" "+"Logical NOT is used to toggle a boolean value from true to false.")
+
+    // 4
+    let myVariable = null;
+    console.log("Q4"+" "+myVariable);
+
+    // 5
+    let myvariable;
+    console.log("Q5"+" "+myvariable);
+
+    // 6
+    const mySymbol = Symbol("id");
+   console.log(mySymbol); 
+    // console.log("Q6"+" "+mySymbol);
+
+    // 7
+    const firstBigInt = 9007199254740991n;
+    const secondBigInt = BigInt("10000000000000000");
+    const total = firstBigInt + secondBigInt;
+    console.log("Q7"+" "+total);
+
+    // 8
+    const stringVal = "25";
+    const numberVal = 25;
+
+    // 1. Loose Equality (==)
+    console.log( stringVal == numberVal);  // Outputs: true
+
+    // 2. Strict Equality (===)
+    console.log(stringVal === numberVal); // Outputs: false
+
+
+    // 1
+    let fruits=["apple","orange","grapes","blueberry"];
+    console.log("Q1"+" "+fruits[3]);
+
+    // 2
+    const colors = ["Red", "Green", "Blue"];
+    colors.push("Yellow");
+    console.log("Q2"+" "+colors); 
+
+    // 3
+    const book = {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    year: 1925
+};
+    console.log("Q3"+" "+"Author:"+book.author); 
+
+    book.year = 2026;
+    console.log(book);
+
+    // 4
+    let a=10;
+    let b=4;
+    substact=a-b;
+    console.log("Q4"+" "+substact);
+
+
+    function subtract(a, b) {
+    return a - b;
+    }
+
+    const result = subtract(10, 4);
+    console.log("Q4"+" "+result);
+
+    // 5
+    const now = new Date();
+    const currentMonth = now.getMonth()+1 ;
+    console.log("Q5"+" "+currentMonth); 
+
+    // 6
+    // 1. Create the original object
+    const originalUser = { name: "Alice", age: 25 };
+
+    // 2. Copy it into a new variable using the spread operator
+    const updatedUser = { ...originalUser };
+
+    // 3. Change a property in the second object
+    updatedUser.name = "Bob";
+
+    // 4. Print both to see they are independent
+    console.log("Q6"+" "+"Original:", originalUser); // Outputs: { name: "Alice", age: 25 }
+    console.log("Updated:", updatedUser);   // Outputs: { name: "Bob", age: 25 }
+
+    let person=new Object();
+    person.name="David";
+    person.age=34;
+    console.log(person);
+    person.name="Luka";
+    console.log(person);
+   </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1
+        console.log("Q1 Check even or odd  :");
+
+        const num = prompt("Enter a number:");
+        if (num % 2 === 0) {
+        console.log(num+":"+"Even");
+        } else {
+        console.log(num+":"+"Odd");
+        }
+
+        // 2
+        console.log("Q2 Positive or negative :")
+
+        const num1=prompt("Enter a number");
+        if(num1>0){
+            console.log(num1+" "+"is a positive number");
+        }else if(num1<0){
+            console.log(num1+" "+"is a negative number");
+        }
+        else{
+           console.log(num1+"is a zero");
+        }
+
+        // 3
+        console.log("Q3 Voting eligibility :");
+
+        let age=prompt("Enter your age:");
+        if(age>=18){
+            console.log(age+" "+"eligible for voting");
+        }
+        else{
+            console.log(age+" "+"Not eligible");
+        }
+
+        // 4
+        console.log("Q4 Grade classification :");
+
+        let mark=prompt("Enter your mark");
+        if(mark>=90){
+            console.log(mark+":"+"A Grade");
+        }
+        else if(mark>=80){
+            console.log(mark+":"+"B Grade");
+        }
+        else if(mark>=70){
+            console.log(mark+":"+"C Grade");
+        }
+        else if(mark>=60){
+            console.log(mark+":"+"D Grade");
+        }
+        else{
+            console.log(mark+":"+"Fail");
+        }
+
+        // 5 Leap year check 
+        console.log("Q5 Leap year check  :"); 
+
+        const year = prompt("Enter a year:");
+
+        if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        console.log(year + " is a leap year.");
+        } else {
+        console.log(year + " is not a leap year.");
+        }
+
+        // 6 Password strength  
+          console.log("Q6 Password strength:"); 
+
+          const password = prompt("Enter your password:");
+          const length = password.length;
+
+          if (length < 6) {
+          console.log("Weak");
+          } else if (length <= 10) {
+          console.log("Medium");
+          } else {
+          console.log("Strong");
+          }
+
+        // 7 Traffic light system 
+        console.log("Q7 Traffic light system:"); 
+        
+        const light = prompt("Enter the light color (Red, Yellow, Green):").toLowerCase();
+
+        if (light === "red") {
+        console.log("Stop");
+        } else if (light === "yellow") {
+        console.log("Ready");
+        } else if (light === "green") {
+        console.log("Go");
+        } else {
+        console.log("Invalid color");
+         }
+
+        //  8 Shopping discount  
+        console.log("Q8 Shopping discount :")
+
+        const bill = Number(prompt("Enter total bill:"));
+
+        if (bill > 500) {
+        console.log("20% Discount applied");
+        } else if (bill >= 200) {
+        console.log("10% Discount applied");
+        } else {
+        console.log("No discount");
+        }
+
+        // 9Triangle type  
+        console.log("Q9 Triangle type  :")
+
+        const s1 = prompt("Enter side 1:");
+        const s2 = prompt("Enter side 2:");
+        const s3 = prompt("Enter side 3:");
+
+        if (s1 === s2 && s2 === s3) {
+        console.log("Equilateral"); // All sides are equal
+        } else if (s1 === s2 || s1 === s3 || s2 === s3) {
+        console.log("Isosceles");   // Two sides are equal
+        } else {
+        console.log("Scalene");     // No sides are equal
+        }
+
+        // 10 Temperature classification
+        console.log("Q10 Temperature classification:")
+        let Temperature=prompt("Enter the temperature");
+        if(Temperature<0){
+            console.log(Temperature+":"+"Freezing");
+        }
+        else if(Temperature<=15){
+            console.log(Temperature+":"+"Cold");
+        }
+        else if(Temperature<=25){
+            console.log(Temperature+":"+"Moderate");
+        }
+        else if(Temperature<35){
+            console.log(Temperature+":"+"Warm");
+        }
+        else{
+            console.log(Temperature+":"+"Hot");
+        }
+
+
+
+
+
+
+            
+        
+    </script>
+</body>
+</html>
