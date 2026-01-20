@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(234, 220, 234, 0.267);
+            display: flex; 
+            justify-content: center;
+            padding: 50px;
+            max-width: 400px;
+            margin: 20px auto; }
+        
+        input{
+            border-radius: 5px;
+            height: 25px;
+        }
+        button{
+           background-color: rgb(25, 224, 10);
+           color: white;
+           border-radius: 4px;
+           height: 30px;
+           width: 100px;
+        }
+        .delete-btn{
+            background-color: red;
+        }
+         
+       ul { list-style: none; padding: 0; }
+        li { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 10px; 
+            border-bottom: 1px solid #ddd; 
+        }
+       
+        
+    
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h2>Grocery Store</h2>
+    <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Add a task">
+        
+        <button id="addBtn">Add Task</button>
+        <p id="error-type-here"></p>
+    </div>
+    <ul id="taskList"></ul>
+</div>
+    <script>
+        const taskInput = document.getElementById('taskInput');
+        const errorDisplay = document.getElementById('error-type-here');
+        const addBtn = document.getElementById('addBtn');
+        const taskList = document.getElementById('taskList');
+
+
+       
+
+
+          addBtn.onclick = function() {
+          const taskValue = taskInput.value;
+
+               if (taskValue.trim() === "") {
+                event.preventDefault(); 
+                errorDisplay.textContent = "***** cannot be empty*****";
+                 
+                return ;
+            }
+             errorDisplay.textContent = "";
+             errorDisplay.style.color = "red";
+   
+
+    
+    const li = document.createElement('li');
+
+    
+    const taskSpan = document.createElement('list');
+    taskSpan.innerText = taskValue;
+    li.appendChild(taskSpan);
+
+    
+    const buttonGroup = document.createElement('div');
+
+   
+    const completeBtn = document.createElement('button');
+    completeBtn.innerText = "Complete";
+    completeBtn.className = "complete-btn";
+
+    completeBtn.onclick = function() {
+       
+    // taskSpan.classList.toggle('complete-text');
+
+    if(taskSpan.classList.contains('Complete')){
+        completeBtn.innerText="undo";
+    }else{
+        completeBtn.innerText="Completed";
+    }
+    };
+
+   
+    const deleteBtn = document.createElement('button');
+    deleteBtn.innerText = "Delete";
+    deleteBtn.className = "delete-btn";
+    deleteBtn.onclick = function() {
+        
+    taskList.removeChild(li);
+    };
+
+   
+    li.appendChild(completeBtn);
+    li.appendChild(deleteBtn)
+    taskList.appendChild(li);
+
+  
+    taskInput.value = "";
+      
+    
+};
+    </script>
+</body>
+</html>

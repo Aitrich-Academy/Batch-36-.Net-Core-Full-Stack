@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .leftside{
+            position: absolute;
+            width: 25%;
+            height: 700px;
+            background-color: rgb(35, 142, 192);
+            text-align: center;
+            color: white;
+            padding-top: 60px;
+            
+        }
+        ul{
+            position: absolute;
+            color: white;
+            padding-left: 70px;
+            padding-top: 30px;
+            text-align: left;
+
+        }
+        ul img{
+            height: 25px;
+            width: 25px;
+            margin-right: 15px; 
+        }
+        .addnew{
+            margin-top: 420px;
+            /* margin-left: 70px; */
+        }
+        .addnew img{
+            width: 80px;
+            height: 80px;
+        }
+        .new{
+            color: white;
+            margin-top: -20px;
+
+        }
+         .rightside{
+            background-color: white;
+            height: 580px;
+            margin-left: 287px;
+            padding: 15px;
+            /* border-top-left-radius: 50px;   */
+        }
+        .navbar{
+
+            /* position: absolute; */
+            background-color: white;
+            padding: 10px;
+            margin-left: -0px;
+            width: 100%;
+            text-align: right;
+            border-bottom: 1px solid;
+        }
+            
+        
+        .navbar img{
+            width: 40px;
+            height: 40px;
+        }
+
+        .jobs{
+             border: 0px solid gray;
+             height: 150px;
+             width: 500px;
+             position: absolute;
+             display: grid;
+             
+             /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+             /* font-style: normal; */
+             margin-left: 80px;
+             margin-top: 100px;
+        }
+         .cards img
+    {
+        position: absolute;
+        margin-left: 25px;
+        margin-top: 40px;
+    }
+    .jobs2{
+            border: 0px solid gray;
+             height: 150px;
+             width: 500px;
+             position: absolute;
+             display: grid;
+             
+             /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+             /* font-style: normal; */
+             margin-left: 80px;
+             margin-top: 300px;
+    }
+   
+
+
+    .jobs3{
+         border: 0px solid gray;
+             height: 150px;
+             width: 500px;
+             position: absolute;
+             display: grid;
+             margin-left: 80px;
+             margin-top: 500px;
+    }
+    .right-right{
+        position: absolute;
+        margin-left: 850px;
+        margin-top: -500px;
+    }
+    .right-right img{
+        width: 670px;
+        height: 650px;
+    }
+   .js{
+    margin-left: 120px;
+    display: grid;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+             font-style: normal;
+    
+   }
+  
+
+   
+    </style>
+</head>
+<body>
+    <div class="leftside">
+        <h1>Hire Me Now..!!</h1>
+        <ul type="none">
+            <li  class="listdiv"><img src="images/dashboard 1.png" alt="dashboard img"align="center">Dashboard</li>
+            <br>
+            <br>
+            <li  class="listdiv"><img src="images/suitcase 2.png" alt="suitcase img"align="center">Jobs</li>
+             <br>
+            <br>
+            <li  class="listdiv"><img src="images/application (1) 1.png" alt="applctn img"align="center">Applications</li>
+             <br>
+            <br>
+            <li  class="listdiv"><img src="images/question (1) 1.png" alt="intrvw img"align="center">Interviews</li>
+             <br>
+            <br>
+            <li class="listdiv"><img src="images/message 1.png" alt="mssg img"align="center"> Messages</li>
+             <br>
+            <br>
+            <li class="listdiv"><img src="images/settings 1.png" alt="settings img"align="center">Settings</li>
+        </ul>
+
+         <div class="addnew">
+            <img src="images/add-group (1) 1.png">
+            <div class="new"><a><h3>Add New</h3></a></div>
+        </div>
+    </div>
+
+    <div class="rightside">
+        <div class="navbar">
+             <img src="images/notification-bing.png" alt="bell img" align="center">
+            <img src="images/cheerful.png" alt="girl img"align="center">
+            <img src="images/Group 33999.png" alt="bell icon" align="center">
+        </div>
+
+        <div class="cards">
+            <div class="jobs" id="SocialMediaAssistant" >
+                  <img src="images/Company Logo (2).png">
+                  <div class="js">
+                       <h3 id="jobTitle1"></h3>
+                       <span id="location1"></span>
+                       <span id="date1"></span>
+                       <span id="time1"></span>
+                  </div>
+            </div>
+
+            <div class="jobs2" id="BrandDesigner" >
+                  <img src="images/Logo.png">
+                  
+                  <div class="js">
+                    <h3 id="jobTitle2"></h3>
+                     <span id="location2"></span>
+                     <span id="date2"></span>
+                     <span id="time2"></span>
+                  </div>
+                  
+            </div>
+
+            <div class="jobs3" id="SocialMediaAssistant" >
+                  <img src="images/Logo 27.png">
+                  <div class="js">
+                     <h3 id="jobTitle3"></h3>
+                     <span id="location3"></span>
+                     <span id="date3"></span>
+                     <span id="time3"></span>
+                  </div>
+                 
+            </div>
+        </div>
+    </div>
+    <div class="right-right">
+                 <img src="images/img.avif">
+    </div>
+
+    <script>
+
+
+    var jobsList=[
+
+          {jobTitle:"Social Media Assistant",location:"Location : Online",date:"Date : 16-06-23",time:"Time : 10.00am"},
+          {jobTitle:"Brand Designer",location:"Location : Offline",date:"Date : 66-10-23",time:"Time : 11.00am"},
+          {jobTitle:"Customer Manager",location:"Location : Online",date:"Date : 06-07-23",time:"Time : 8.00am"}
+]
+    document.addEventListener("DOMContentLoaded", function() {
+            loadData();
+          });
+
+    function loadData()
+    {
+          var jobTitle1=document.getElementById("jobTitle1");
+          var jobTitle2=document.getElementById("jobTitle2");
+          var jobTitle3=document.getElementById("jobTitle3");
+
+          var location1=document.getElementById("location1");
+          var location2=document.getElementById("location2");
+          var location3=document.getElementById("location3");
+
+          var date1=document.getElementById("date1");
+          var date2=document.getElementById("date2");
+          var date3=document.getElementById("date3");
+
+          var time1=document.getElementById("time1");
+          var time2=document.getElementById("time2");
+          var time3=document.getElementById("time3");
+
+
+          jobTitle1.innerHTML=jobsList[0].jobTitle;
+          location1.innerHTML=jobsList[0].location;
+          date1.innerHTML=jobsList[0].date;
+          time1.innerHTML=jobsList[0].time;
+          
+          jobTitle2.innerHTML=jobsList[1].jobTitle;
+          location2.innerHTML=jobsList[1].location;
+          date2.innerHTML=jobsList[1].date;
+          time2.innerHTML=jobsList[1].time;
+          
+          jobTitle3.innerHTML=jobsList[2].jobTitle;
+          location3.innerHTML=jobsList[2].location;
+          date3.innerHTML=jobsList[2].date;
+          time3.innerHTML=jobsList[2].time;
+}
+    </script>
+</body>
+</html>

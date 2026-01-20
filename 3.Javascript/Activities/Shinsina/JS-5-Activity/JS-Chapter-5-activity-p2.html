@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [10, 20, 30, 40, 50];
+        let fruits = ["Apple", "Banana", "Mango", "Orange"];   
+        
+        // 1
+        console.log("Q1:")
+        let firstElement = numbers.shift();
+        console.log("Removed element:", firstElement); // Output: 10
+        console.log("Updated array:", numbers); 
+        // 2
+        console.log("Q2:")
+        let newLength=fruits.unshift("Grapes");
+        console.log("Updated :", newLength); 
+        console.log("Updated :", fruits); 
+        // 3
+        console.log("Q3:")
+        fruits.splice(3,1,"pineapple");
+        console.log("Updated :", fruits); 
+        // 4
+        numbers.reverse();
+        console.log("Q4:"+"Reversed array:", numbers); 
+
+        // 5
+        let combinedArray = numbers.concat(fruits);
+
+        console.log("Q5:"+"CombinedArray:"+combinedArray); 
+
+        // 6
+        let result = numbers.find(num => num > 25);
+        console.log("Q6:"+"Result:"+ result); 
+
+        // 7
+        let fruitString = fruits.join(" - ");
+
+        console.log("Q7:"+"Result:"+fruitString);
+
+        // 8
+        fruits.sort();
+
+        console.log("Q8:"+"Result:"+fruits);
+
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        console.log("Arithmetic Operators");
+    //  1
+     let a=10,b=20;
+     console.log("Q1"+" "+"Sum is:"+(a+b));
+
+    //  2
+    let x=30,y=50;
+    console.log("Q2"+" "+"Difference is:"+(a-b))
+
+    // 3
+    let product = 5 * 10;
+    console.log("Q3"+" "+"Product is:"+product);
+
+    // 4
+    let a1=20,b1=4;
+    quotient=a1/b1;
+    console.log("Q4"+" "+"Difference is:"+quotient);
+
+    // 5
+    let dividend = 50;
+    let divisor = 3;
+
+    // Find the remainder
+    let remainder = dividend % divisor;
+
+    // Print the result
+    console.log("Q5"+" "+"Remainder is:"+remainder); // Outputs: 1
+
+    // 6
+
+    let base = 2, exponent = 3;
+    console.log("Q6"+" "+base ** exponent); // Output: 8
+
+    // 7
+    let num1=10,num2=5,num3=2;
+    let result1=(num1+num2)*num3;
+    console.log("Q7"+" "+"Result:"+result1)
+
+    console.log("Assignment Operators")
+    // 8
+    var x3=10;
+    x3 += 5; // Equivalent to x = x + 5
+    console.log("Q8"+" "+"Result:"+x3);
+
+    // 9
+    x4=10;
+    x4 -=3;
+     console.log("Q9"+" "+"Result:"+x4);
+
+    //  10
+    x5=10;
+    x5 *=4;
+    console.log("Q10"+" "+"Result:"+x5);
+
+    // 11
+    x6=10;
+    x6 /=2;
+     console.log("Q11"+" "+"Result:"+x6);
+
+    //  12
+    let x7 = 20;
+
+    // 2. Use %= to find the remainder when divided by 6
+    x7 %= 6; // Equivalent to x = x % 6
+
+    // 3. Print the result
+    console.log("Q12"+" "+"Result:"+x7);// Outputs: 2 (since 20 divided by 6 leaves a remainder of 2)
+
+    // 13
+    let greeting = "Hello";
+    greeting += ", World!";
+    console.log("Q13"+" "+"Result:"+greeting); // Output: Hello, World!
+
+    console.log("Comparison Operators");
+
+    // 14
+    let a2 = 10;
+    let b2 = 10;
+    let c = 5;
+
+    // 1. Compare equal numbers
+    console.log("Q14:")
+    console.log(a2 == b2); // Outputs: true
+
+
+    // 2. Compare different numbers
+    console.log(a2 == c); // Outputs: false
+
+    // 3. Loose equality with different types (Type Coercion)
+    console.log(a2 == "10"); // Outputs: true (the string "10" is converted to the number 10)
+
+    // 15
+    let num = 10;
+    let str = "10";
+
+    // Use === to check for strict equality
+    let result = (num === str);
+
+    // Print the result
+    console.log("Q15"+" "+result);
+
+    // 16
+    let x1=20,y1=50;
+    let result2=x1>y1;
+    console.log("Q16"+" "+result2);
+
+
+    // 17
+    let x0=20,y0=50;
+    let result3=x0<y0;
+    console.log("Q17"+" "+result3);
+
+    // 18
+    let a9= 90;
+    let b9= 10;
+    let areNotEqual = (a9 != b9);
+    console.log("Q18"+" "+areNotEqual);
+
+    // 19
+    let x2=50,y2=580;
+    let Compare1=x2<=y2;
+    console.log("Q19"+" "+Compare1);
+
+    // 20
+    console.log("Q20:")
+    let val1 = 10;
+    let val2 = "10";
+    let val3 = 20;
+    console.log(val1 !== val2);
+    console.log(val1 !== val3); 
+    console.log(val1 !== 10);
+
+    console.log("Logical Operators")
+
+    // 21
+    let x11 = 25;
+    let isWithinRange = (x11 > 20 && x11 < 30);
+    console.log("Q21"+" "+isWithinRange);
+
+
+    // 22
+    let isWeekend = true;
+    let isHoliday = false;
+
+    // Returns true because at least one condition is true
+    let canRelax = isWeekend || isHoliday;
+
+    console.log("Q22"+" "+canRelax); 
+
+    // 23
+    console.log("Q23:"); 
+
+    let isStudent = true;
+    console.log(!isStudent); // Output: false
+
+
+
+    let isLogged = true;
+
+    // Invert the value using !
+    let isNotLogged = !isLogged;
+   
+    console.log("Original:", isLogged);    // Output: true
+    console.log("Inverted:", isNotLogged); // Output: false
+
+    // 24
+    let numb = 15;
+    console.log("Q24"+" "+(numb >= 10 && numb <= 20)); // Output: true
+
+    // 25
+    let num4=60;
+    console.log("Q25"+" "+(numb < 10 || numb <50));
+    
+    // 26
+    let number = 0;
+    let isOutside = (number < 1 && number > 100);
+    console.log("Q26"+" "+"Is outside range?", isOutside); 
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     // Q1 Square each number  
+     console.log("Q1"+" "+"Square each number  ");
+
+     const numbers = [1, 2, 3, 4, 5];
+     const result = numbers.map(n => n ** 2);
+      console.log("squaredNumbers"+" :"+ result);
+      console.log(result);
+
+    // Q2 Convert to uppercase 
+    console.log("Q2"+" "+"Convert to uppercase");
+
+    let animals= ["dog", "cat", "bird"];
+    const result1 = animals.map(animal => animal.toUpperCase());
+    console.log( result1);
+
+    // Q3 Extract lengths of words
+    console.log("Q3"+" "+"Extract lengths of words");
+
+    let fruits=["apple", "banana", "kiwi"];
+    let result2=fruits.map(fruits=>fruits.length);
+    console.log(result2);
+
+    // Q4 Add tax to prices  
+    console.log("Q4"+" "+"Add tax to prices");
+
+    const prices = [100, 200, 300];
+    // Use map to calculate the new price (original * 1.10)
+    const pricesWithTax = prices.map(price => price * 1.10);
+    console.log(pricesWithTax);
+
+    // Q5 Keep even numbers
+    console.log("Q5"+" "+"Keep even numbers"); 
+    
+    let number = [1, 2, 3, 4, 5, 6];
+    const evenNumbers = numbers.filter(n => n % 2 === 0);
+    console.log(evenNumbers);
+
+    // Q6 Filter short words  
+    console.log("Q6"+" "+"Filter short words  ");
+    
+    let words= ["hi", "hello", "sun", "world", "js"];
+    let filter=words.filter(s=>s.length<=3);
+    console.log(filter);
+
+    // Q7 Filter passing marks   
+    console.log("Q7"+" "+"Filter passing marks ");
+    let mark=[45, 67, 89, 32, 76];
+    let filteredmark=mark.filter(mark=>mark>=50);
+    console.log(filteredmark);
+
+     // Q8 Filter names starting with "A"     
+    console.log("Q8"+" "+"Filter names starting with A ");
+    let names=["Alice", "Bob", "Anita", "Charlie"];
+    let nameWithA=names.filter(names=>names.startsWith("A"));
+    console.log(nameWithA);
+
+     // Q9 Double only even numbers     
+    console.log("Q9"+" "+"Double only even numbers  ");
+
+    let evennumber= [1, 2, 3, 4, 5, 6];
+    const result3 = evennumber.filter(n => n % 2 === 0).map(n => n * 2);
+    console.log(result3);
+
+    // Q10 Uppercase long words      
+    console.log("Q10"+" "+"Uppercase long words");
+
+    let words1=["hi", "hello", "sun", "world"];
+    let result4=words1.filter(words1=>words1.length>3).map(words1=>words1.toUpperCase());
+    console.log(result4);
+
+     // Q11 Print numbers 1–10      
+    console.log("Q11"+" "+"Print numbers 1–10");
+    let i = 1;
+    while (i <= 10) {
+              console.log(i);
+  
+        i++;       // Increment the counter
+}
+
+// Q12 Sum of first N natural numbers       
+    console.log("Q12"+" "+"Sum of first N natural numbers  ");
+
+    const N = 5;
+    let sum = 0;
+    let j = 1;
+    while (j <= N) {
+     sum += j; // Add current counter to total
+     j++;      // Move to the next number
+}
+     console.log(sum); 
+
+     // Q13 Factorial of a number        
+    console.log("Q13"+" "+"Factorial of a number  ");
+    let n = 5;
+    let factorial = 1;
+    while (n > 0) {
+         factorial *= n; // Multiply total by current number
+         n--;           // Decrease n by 1
+    }
+    console.log(factorial);
+
+
+ // Q14 Reverse digits of a number        
+    console.log("Q14"+" "+"Reverse digits of a number");  
+
+    let num = 1234;
+    let reversed = 0;
+
+    while (num > 0) {
+     let lastDigit = num % 10;          // Get the last digit (e.g., 4)
+     reversed = reversed * 10 + lastDigit; // Shift existing digits and add new one
+     num = Math.floor(num / 10);        // Remove the last digit from num
+    }
+
+    console.log(
+       "1234"+" : "+ reversed); 
+        
+       
+    // Q15 Sum of first N natural numbers        
+    console.log("Q15"+" "+"Sum of first N natural numbers ");
+    const N1 = 5;
+    let sum1 = 0;
+    let k = 1;
+
+    while (k <= N) {
+      sum1 += k; // Adds the current number to the total
+      k++;      // Increments the counter to the next number
+    }
+
+    console.log(sum1); 
+
+    // Q16 User input validation (conceptual)     
+    console.log("Q16"+" "+"User input validation (conceptual)   ");
+    let number1;
+
+    do {
+    // Always runs at least once
+     number1 = prompt("Enter a number greater than 10:");
+  
+     // Convert the text input to a number for comparison
+     number1 = Number(number1);
+     } while (number1 <= 10); // Loop continues as long as number is 10 or less
+
+     console.log("Success! You entered:", number1);
+
+
+     // Q17 Multiplication table     
+    console.log("Q17"+" "+"Multiplication table     ");
+
+    let m = 1;
+
+    do {
+     console.log(`7 x ${m} = ${7 * m}`);
+     m++;
+    } while (m<= 10);
+
+
+    // Q18 Sum until threshold    
+     console.log("Q18"+" "+"  Sum until threshold   ");
+
+     let sum2 = 0;
+    let a = 1;
+
+    do {
+       sum2 += a;  // Add the current number to the sum
+        a++;       // Move to the next number
+     } while (sum2 <= 50);
+
+     console.log("Final Sum:", sum2);
+     console.log("Last number added:", a - 1);
+
+     // Q19 Day of the week     
+    console.log("Q19"+" "+"  Day of the week   ");
+
+    const day = 3;
+
+switch (day) {
+  case 1: console.log("Monday"); break;
+  case 2: console.log("Tuesday"); break;
+  case 3: console.log("Wednesday"); break;
+  case 4: console.log("Thursday"); break;
+  case 5: console.log("Friday"); break;
+  case 6: console.log("Saturday"); break;
+  case 7: console.log("Sunday"); break;
+  default: console.log("Invalid day");
+}
+
+// Q20 Grade evaluation  
+    console.log("Q20"+" "+" Grade evaluation    ");
+    let grade = prompt("enter your Grade");
+
+switch (grade) {
+  case "A":
+    console.log("Excellent");
+    break;
+  case "B":
+    console.log("Good");
+    break;
+  case "C":
+    console.log("Average");
+    break;
+  case "D":
+    console.log("Poor");
+    break;
+  case "F":
+    console.log("Fail");
+    break;
+  default:
+    console.log(grade+":"+ "Invalid Grade");
+}
+
+// Q21 Calculator  
+    console.log("Q21"+" "+" Calculator      ");
+
+    const num1 = 10;
+const num2 = 5;
+const operator = "*"; // Change to +, -, *, or /
+
+let result5;
+
+switch (operator) {
+  case "+":
+    result5 = num1 + num2;
+    break;
+  case "-":
+    result5 = num1 - num2;
+    break;
+  case "*":
+    result5 = num1 * num2;
+    break;
+  case "/":
+    result5 = num2 !== 0 ? num1 / num2 : "Cannot divide by zero";
+    break;
+  default:
+    result5 = "Invalid operator";
+}
+
+console.log(result5);
+
+// Q22 Traffic light system    
+    console.log("Q22"+" "+" Traffic light system       ");
+
+    const lightColor = "Red";
+
+switch (lightColor) {
+  case "Red":
+    console.log("Stop");
+    break;
+  case "Yellow":
+    console.log("Ready");
+    break;
+  case "Green":
+    console.log("Go");
+    break;
+  default:
+    console.log("Invalid Color");
+}
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

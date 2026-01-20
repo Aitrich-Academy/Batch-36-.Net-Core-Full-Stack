@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1 Count vowels with for...of
+        console.log("Q1:")
+
+        let word = "iteration";
+        let vowels = "aeiou"; 
+        let count = 0; 
+        for (let char of word) { 
+            if (vowels.includes(char)) count++;
+        }
+        console.log("No: of vowels includes:"+count); 
+
+        // 2 Reverse string with for...of
+        console.log("Q2:")
+
+        let str="student";
+        let reversed="";
+        for (let char of str) {
+        reversed = char + reversed; // Adds the new character to the FRONT
+        }
+        console.log("Reversed version:"+reversed);
+
+        // 3 Sum of elements with forEach()
+        console.log("Q3:")
+
+        const numbers = [5, 10, 15, 20];
+        let sum = 0;
+        numbers.forEach(num => sum += num);
+        console.log("Sum:"+sum); 
+
+        // 4 Print indexes with for...in  
+        console.log("Q4:")
+
+        let arr = [100, 200, 300];
+        for (let index in arr) {
+        console.log("Indexes:"+index);
+        } // Output: "0", "1", "2"
+
+         // 5 Double values with for...of  
+        console.log("Q5:")
+
+        const vals = [2, 4, 6];
+        for (const val of vals) {
+        console.log(val * 2); // Output: 4, 8, 12
+        }
+
+        // 6 Print student details with for...in Given  
+        console.log("Q6:")
+
+        let student = { name: "Rahul", age: 21, grade: "B" };
+        for (let [key, value] of Object.entries(student)) {
+        console.log(key + ": " + value);}
+
+
+
+
+
+    </script>
+</body>
+</html>
+

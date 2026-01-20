@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Q1 Button Click Alert</p>
+    <button onclick="alert('Hello, World!')">Click Me</button>
+    <button id="alertBtn">Click Me</button>
+
+    <p> Q2 Change Text on Click</p>
+    <!-- The paragraph element to be changed -->
+    <p id="message">Original Text</p>
+
+    <!-- The button that triggers the change -->
+    <button id="updateBtn">Change Text</button>
+
+    <p> Q3 Mouseover Highlight</p>
+    <div id="mouseover">Hover Me </div>
+
+    <p>Q4 Form Submission</p>
+
+   <form id="simpleForm">
+      <input type="text" id="userText" placeholder="Write something..." required>
+      <button type="submit">Display</button>
+   </form>
+
+   <p id="result"></p>
+
+   <p>Q5 Keyboard Events</p>
+   <input type="text" id="box1" placeholder="Press a key...">
+   <p>Key: <span id="out">None</span></p>
+   <p id="msg"></p>
+
+   <p> Q6 Image Toggle</p>
+   <!-- <img id="image" src="images/dog.jpg"width="300px";height="300px";> -->
+   <img id="myImg" src="images/cat.jpg" alt="Cat" style="width:200px; cursor:pointer;">
+
+   
+    
+    
+    
+    <!-- JAVASCRIPT -->
+    <script>
+    //Q1 Button Click Alert
+   
+        // Select the button by its ID
+    const button = document.getElementById('alertBtn');
+
+    // Add a 'click' event listener to trigger the alert
+    button.addEventListener('click', () => {
+    alert("Hello, World!");
+    });
+
+    // Q2 Change Text on Click
+
+     // 1. Select the elements from the document
+    const displayParagraph = document.getElementById('message');
+    const actionButton = document.getElementById('updateBtn');
+
+    // 2. Add the click event listener
+    actionButton.addEventListener('click', () => {
+        // 3. Update the text securely
+        displayParagraph.textContent = "Text Changed!";
+    });
+
+    // Q3 Mouseover Highlight
+    const box=document.getElementById('mouseover');
+    box.addEventListener('mouseenter', () => {
+    box.style.backgroundColor = 'yellow';
+});
+    box.addEventListener('mouseleave',()=>{
+        box.style.backgroundColor='white';
+    });
+
+    // Q4 Form Submission
+    const form = document.getElementById('simpleForm');
+    const output = document.getElementById('result');
+    const input = document.getElementById('userText');
+
+    form.addEventListener('submit', (event) => {
+    // 1. Stop the page from reloading
+    event.preventDefault();
+
+    // 2. Grab the value and display it securely
+    output.textContent = "You typed: " + input.value;
+
+    // 3. Clear the box
+    input.value = "";
+});
+
+// Q5 Keyboard Events
+const box1 = document.getElementById('box1');
+const out = document.getElementById('out');
+const msg = document.getElementById('msg');
+
+box1.addEventListener('keydown', (e) => {
+    // 1. Display the key name
+    out.textContent = e.key;
+
+    // 2. Bonus: Check for Enter
+    if (e.key === 'Enter') {
+        msg.textContent = "Success! You hit Enter.";
+    } else {
+        msg.textContent = "";
+    }
+});
+
+// Q6 Image Toggle
+const img = document.getElementById('myImg');
+
+// Use relative paths to your folder
+const catPath = "images/cat.jpg";
+const dogPath = "images/dog.jpg";
+
+img.addEventListener('click', () => {
+    // .src returns the full URL, so .getAttribute('src') is more reliable for local files
+    if (img.getAttribute('src') == catPath) {
+        img.src = dogPath;
+        img.alt = "Dog";
+    } else {
+        img.src = catPath;
+        img.alt = "Cat";
+    }
+});
+
+    </script>
+</body>
+</html>

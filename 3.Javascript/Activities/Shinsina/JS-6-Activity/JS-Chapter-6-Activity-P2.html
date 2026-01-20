@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1 Count vowels in a string  
+        console.log("Q1 Count vowels in a string  :");
+
+        const str = "education";
+        const vowels = "aeiou";
+        let count = 0;
+
+        for (let i = 0; i < str.length; i++) {
+        // Check if the current character is included in the vowels string
+        if (vowels.includes(str[i])) {
+        count++;
+         }
+        }
+        console.log("Number of vowels in 'education': " + count);
+
+        // 2 Reverse a string  
+        console.log("Q2 Reverse a string  :");
+
+        const strg = "hello";
+        let reversedStr = "";
+        for (let i = strg.length - 1; i >= 0; i--) {
+        reversedStr += strg[i];
+        }
+        console.log(reversedStr);
+
+        // 3  Find character frequency  
+        console.log("Q3 Find character frequency:");
+        let string="mississipi";
+        let sCount="s";
+        let count1=0;
+        for(i=0;i<string.length;i++){
+            if(sCount.includes(string[i])){
+                count1++;
+            }
+        }
+        console.log("No: Of 's' in mississipi is:"+count1);
+
+        // 4  Check palindrome 
+         console.log("Q4 Check palindrome:"); 
+        const strg1 = "madam";
+        let reversed = "";
+
+        // Build the string backwards
+        for (let i = strg1.length - 1; i >= 0; i--) {
+        reversed += strg1[i];
+        }
+
+        // Simple if-else to compare
+        if (strg1 === reversed) {
+        console.log(strg1+","+"It is a palindrome");
+        } else {
+        console.log(strg1+","+"It is not a palindrome");
+        }
+
+
+        // 5  Sum of numbers  
+        console.log("Q5 Sum of numbers:"); 
+
+        let array=[2, 4, 6, 8];
+        let sum=0;
+        for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+        }
+        console.log("Total sum:"+" "+sum);
+
+        // 6 Find maximum element
+        console.log("Q6 Find maximum element:");  
+        const nums = [12, 45, 7, 23, 89];
+        let max = nums[0];
+
+        for (let i = 1; i < nums.length; i++) {
+        if (nums[i] > max) {
+        max = nums[i];
+         }
+        }
+        console.log("Max:", max);
+
+        // 7 Print even numbers
+        console.log("Q7 Print even numbers:");
+        const numbers = [1, 2, 3, 4, 5, 6];
+
+        for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+        console.log(numbers[i]); // Prints 2, 4, 6
+        }
+        }
+
+         // 8 Reverse an array  
+        console.log("Q8 Reverse an array  :");
+
+        const strg2 = [10, 20, 30, 40];
+        let reverses = [];
+        for (let i = strg2.length - 1; i >= 0; i--) {
+        reverses.push(strg2[i]);
+        }
+        console.log(reverses);
+
+
+        // 9 Count occurrences  
+        console.log("Q9 Count occurrences  :");
+
+        const data = [1, 2, 3, 2, 4, 2, 5];
+        let count2 = 0;
+
+        for (let i = 0; i < data.length; i++) {
+        if (data[i] === 2) {
+        count2++;
+        }
+        }
+        console.log("Occurrences of 2:", count2);
+
+    </script>
+</body>
+</html>
+
