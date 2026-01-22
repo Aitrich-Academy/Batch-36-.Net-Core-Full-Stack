@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Chapter 7</title>
+</head>
+<body>
+    <script>
+        //addTwoNumbers
+        console.log("addTwoNumbers:");
+        function addTwoNumbers(a,b){
+            return a+b;
+        }
+        let result=addTwoNumbers(3,5);
+        console.log(result);
+        // isEven
+        console.log("isEven:");
+        function isEven(num){
+            if(num%2===0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        let resultEven=isEven(4);
+        console.log(resultEven);
+        //greet(name)
+        console.log("greet:");
+        function greet(name){
+            console.log("Hello "+name+" !");
+        }
+        greet("Soumya");
+
+        //findSquare
+        console.log("findSquare:");
+        function findSquare(number){
+            let sqr=number*number;
+            console.log("Square of "+number+ " is "+sqr);
+        }
+        findSquare(5);
+
+        //getFullName
+        console.log("getFullName");
+        function getFullName(firstName,lastName){
+            return firstName+" "+lastName;
+        }
+        console.log(getFullName("Ada","Lovelace"));
+
+        //calculateArea
+        console.log("calculateArea:");
+        function calculateArea(length,width){
+            return length*width;
+        }
+        console.log("Area is " +calculateArea(4,5));
+
+        //maxOfTwo
+        console.log("maxOfTwo:");
+        function maxOfTwo(a,b){
+            if(a>b){
+                return a;
+            }
+            else{
+                return b;
+            }
+        }
+        console.log("maxOfTwo is "+maxOfTwo(10,20));
+
+        //grade
+        console.log("grade:");
+        function grade(score){
+            if(score>=50){
+                return "Pass";
+            }
+            else{
+                return "Fail";
+            }
+        }
+        console.log(grade(75));
+
+        //isLeapYear
+        console.log("isLeapYear:");
+        function isLeapYear(year){
+            if(year%4===0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        console.log("isLeapYear: "+isLeapYear(2020));
+
+    </script>
+</body>
+</html>

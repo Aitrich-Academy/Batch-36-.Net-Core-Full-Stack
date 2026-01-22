@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .chat-container {
+    width: 350px;
+    height: 500px;
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    font-family: Arial, sans-serif;
+   }
+
+/* chat messages area */
+    .chat-window {
+    padding: 15px;
+    overflow-y: auto;
+    }
+
+    /* common bubble */
+    .bubble {
+        padding: 12px;
+        margin-bottom: 12px;
+        max-width: 75%;
+        position: relative;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+
+    /* receiver (grey) */
+    .grey {
+        background: #f1f1f1;
+    }
+
+    /* grey arrow */
+    .grey::after {
+        content: "";
+        position: absolute;
+        left: -8px;
+        top: 12px;
+        border-width: 8px;
+        border-style: solid;
+        border-color: transparent #f1f1f1 transparent transparent;
+    }
+
+    /* sender (blue) */
+    .blue {
+        background: #0078c8;
+        color: white;
+        margin-left: auto;
+    }
+
+    /* blue arrow */
+    .blue::after {
+        content: "";
+        position: absolute;
+        right: -8px;
+        top: 12px;
+        border-width: 8px;
+        border-style: solid;
+        border-color: transparent transparent transparent #0078c8;
+    }
+
+    /* input area */
+    .chat-input {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        border-top: 1px solid #ccc;
+    }
+
+    .chat-input input {
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+
+    .chat-input button {
+        padding: 10px 15px;
+        background: #0078c8;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    #sendbtn{
+        background-color: rgb(250, 250, 250);
+        color: blue;
+        font-weight: bolder;
+    }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+
+    <div class="chat-window" id="chatWindow">
+        <div class="bubble blue">
+            Thank you for expressing interest to join Aitrich Technologies. To get you started with your application, we will ask some questions.
+        </div>
+        <div class="bubble grey">
+            Proceed.
+        </div>
+        <div class="bubble blue">
+            Your Current Location.
+        </div>
+        <div class="bubble grey">
+            Banglore.
+        </div>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" id="messageInput" placeholder="Type your message here">
+        <button id="sendBtn">></button>
+    </div>
+
+</div>
+<script>
+const input = document.getElementById("messageInput");
+const chat = document.getElementById("chatWindow");
+const sendBtn = document.getElementById("sendBtn");
+
+sendBtn.addEventListener("click", sendMessage);
+
+function sendMessage() {
+    if (input.value.trim() === "") return;
+
+    const msg = document.createElement("div");
+    msg.className = "bubble blue";
+    msg.innerText = input.value;
+
+    chat.appendChild(msg);
+    input.value = "";
+    chat.scrollTop = chat.scrollHeight;
+}
+</script>
+
+</body>
+</html>

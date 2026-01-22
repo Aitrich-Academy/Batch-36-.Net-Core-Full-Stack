@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Chapter 8 Activity</title>
+    <style>
+        #box{
+            width : 150px;
+            height: 100px;
+            border: solid black;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showAlert()">Click</button>
+    <button id="btn">Click Me</button>
+    <p id="text">Original Text </p>
+    <button id="change">Change</button>
+    <br><br>
+    <div id="box"></div>
+
+    <!-- Form Submission -->
+    <form id="form1">
+        Your Name:<input id="uname" type="text" placeholder="Enter Your Name">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="display-name"></p>
+
+
+    <!-- Keyboard Events -->
+    <p>Pressed Key: <span id="keyDisplay">None</span></p>
+
+
+    <!-- image toggle -->
+     <img id="imgToggle" src="cat.jpg" width="200px" style="cursor: pointer;">
+
+
+    <script>
+        //Button Click Alert
+        //console.log("Button Click Alert:");
+        function showAlert(){
+            alert("Hello, World!");
+        }
+        const button=document.getElementById("btn");
+        button.addEventListener("click",function(){
+            alert("Hello, World!");
+        });
+        //Change Text on Click
+        const change=document.getElementById("change");
+        const paragraph=document.getElementById("text");
+        change.addEventListener("click",function(){
+            paragraph.textContent = "Text Changed!";
+        });
+
+        //Mouseover Highlight
+        const box=document.getElementById("box");
+        box.addEventListener("mouseenter",function(){
+            box.style.backgroundColor="blue";
+        });
+        box.addEventListener("mouseleave",function(){
+            box.style.backgroundColor="white";
+        });
+
+        //Form Submission
+        const form=document.getElementById("form1");
+        const name=document.getElementById("uname");
+        const output=document.getElementById("display-name");
+         form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            output.textContent = name.value; // Display entered text
+            name.value = ""; // Optional: clear input
+        });
+
+        //Keyboard Events
+        const keyDisplay = document.getElementById("keyDisplay");
+        document.addEventListener("keydown", function (event) {
+            // Display the key pressed
+            keyDisplay.textContent = event.key;
+
+            // Bonus: Check if Enter key is pressed
+            if (event.key === "Enter") {
+            alert("You have pressed the Enter key!!!!");
+            } 
+        });
+
+
+        //image toggle
+        
+        const image = document.getElementById("imgToggle");
+
+        image.addEventListener("click", function () {
+            if (image.src.includes("cat.jpg")) {
+            image.src = "dog.jpg";
+            } 
+            else {
+            image.src = "cat.jpg";
+            }
+        });
+
+    </script>
+</body>
+</html>
