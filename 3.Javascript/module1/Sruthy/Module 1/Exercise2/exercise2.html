@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Chapter 9 Exercise 2</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body{
+        margin:0px;
+        padding: 0px;
+    }
+    .left {
+        background:#117ebd;
+        position: absolute;
+        width: 250px;
+        height: 1000px;
+        
+    }
+    h1{
+        text-align: center;
+        color: white;
+        padding-top: 40px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="left">
+       <h1 >Hire Me!</h1>
+
+       <!-- we are adding menu in left side -->
+       <div class="menu">
+
+        <!-- unordered list -->
+         <ul type="none">
+            <div class="listdiv">
+                <li><img src="images/dashboard 1.png"height="20px"width="20px"alt="dashboard img"><a href="#">Dashboard</a></li>
+            </div>
+            <br>
+            <div class="listdiv">
+                <li><img src="images/suitcase 2.png"height="20px"width="20px"alt="suitcase img"><a href="#">Jobs</a></li>
+            </div>
+            <br>
+            <div class="listdiv">
+                <li><img src="images/application (1) 1.png "height="20px"width="20px"alt="apptn img"><a href="#">Application</a></li>
+            </div>
+            <br>
+            <div class="listdiv">
+                <li><img src="images/question (1) 1.png"height="20px"width="20px"alt="dashboard img"><a href="#">Interviews</a></li>
+            </div>
+            <br>
+            <div class="listdiv">
+                <li><img src="images/message 1.png"height="20px"width="20px"alt="chat img"><a href="#">Messages</a></li>
+            </div>
+            <br>
+            <div class="listdiv">
+                <li><img src="images/settings 1.png"height="20px"width="20px"alt="settings img"><a href="#">Settings</a></li>
+            </div>
+         </ul>
+          <div style="text-align: center;">
+                    <a href="#"><img src="images/add-group (1) 1.png"><br>AddNew</a>
+                </div>
+
+       </div>
+
+    </div>
+    <div class="navbar">
+            <div style="float: right;">
+                <table>
+                    <tr>
+                        <td><a href=""><img src="images/notification-bing.png"></a></td>
+                        <td><a href=""><img src="images/girl.png"></a></td>
+                        <td><a href=""><img src="images/exit 1.png" align="center">Logout</a></td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+    <div class="middle">
+        <font size="5" face="Courier New, monospace" ><b>All Messages</b></font>
+        <br>
+        <br>
+        <div class="chat">
+            <br>
+            <img src="images/vivek.png">
+            <br>
+            <div class="text">
+                <font size="3" face="Courier New, monospace"><b>Rajeev M V</b></font><br>
+                <font size="3" face="Courier New, monospace" color="grey">Java Developer</font><br>
+                <span class="time" style="float: right;">10:58 AM</span><br><br>
+            </div>
+                
+        </div>   
+        <div class="chat">
+            <img src="images/alen.png">
+            <br>
+            <div class="text">
+                <font size="3" face="Courier New, monospace"><b>Anoop R K</b></font><br>
+                <font size="3" face="Courier New, monospace" color="grey">Python Developer</font><br>
+                <span class="time" style="float: right;">10:56 AM</span><br><br>
+            </div>
+        </div> 
+        <div class="chat">
+            <img src="images/Revathy.png">
+            <br>
+            <div class="text">
+                <font size="3" face="Courier New, monospace"><b>Revathy. R. U</b></font><br>
+                <font size="3" face="Courier New, monospace" color="grey">Python Developer</font>
+                <span class="time" style="float: right;">10:47 AM</span><br><br>
+            </div>
+        </div> 
+    </div>
+
+
+   <div class="right">
+        <img src="images/Search.png" width="30px" style="float: right;" align="margin-top"><br>
+        <font size="2" face="Courier New, monospace"><b>Rajeev M V</b><br><br>
+        Online</font><br><br>
+        <div class="chat-container">
+
+            <div class="chat-window" id="chatWindow">
+                <div class="bubble blue">
+                    Thank you for expressing interest to join Aitrich Technologies. To get you started with your application, we will ask some questions.
+                </div>
+                <div class="bubble grey">
+                    Proceed.
+                </div>
+                <div class="bubble blue">
+                    Your Current Location.
+                </div>
+                <div class="bubble grey">
+                    Banglore.
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type your message here">
+                <button id="sendBtn">></button>
+            </div>
+
+        </div>
+
+   </div>
+   <script>
+        const input = document.getElementById("messageInput");
+        const chat = document.getElementById("chatWindow");
+        const sendBtn = document.getElementById("sendBtn");
+
+        sendBtn.addEventListener("click", sendMessage);
+        input.addEventListener("keydown",function(event){
+            if(event.key==="Enter"){
+                event.preventDefault();
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            if (input.value.trim() === "") return;
+
+            const msg = document.createElement("div");
+            msg.className = "bubble blue";
+            msg.innerText = input.value;
+
+            chat.appendChild(msg);
+            input.value = "";
+            chat.scrollTop = chat.scrollHeight;
+        }
+    </script>
+    
+</body>
+</html>

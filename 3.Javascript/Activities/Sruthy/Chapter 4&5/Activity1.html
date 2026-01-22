@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let text = "JavaScript";
+        console.log(text[0]);
+        let number = 150;
+        number > 100
+        ? console.log("The number is greater than 100")
+        : console.log("The number is 100 or less");
+        let a = true;
+        a = !a;
+        console.log(a);
+        let value = null;
+        console.log(value);
+        let num;
+        console.log(num);
+        let id = Symbol("id");
+        console.log(id);
+        let num1 = 12345678901234567890n;
+        let num2 = 98765432109876543210n;
+        let sum = num1 + num2;
+        console.log(sum);
+        console.log("25"==25);
+        console.log("25"===25);
+        let fruits = ["Mango", "Apple", "Banana","Grapes", "Orange" ];
+        console.log(fruits[4]);
+        fruits.push("Strawberry");
+        console.log(fruits);
+        let book = {
+                    title: "JavaScript",
+                    author: "Sruthy",
+                    year: 2025
+                   };
+        console.log(book.author);
+        book.year=2026;
+        console.log(book.year);
+        function subtract(a,b){
+            return(a-b);
+        }
+        let result=subtract(10,4);
+        console.log(result);
+        let today=new Date();
+        console.log(today.getMonth());
+        let person1 = { name: "Sruthy", age: 37 };
+        let person2 = {...person1};
+        person2.age=38;
+        console.log(person1);
+        console.log(person2);
+        let person3= new Object();
+        
+        // Arithmetic operations
+        let A=10;
+        let B=20;
+        let Sum=A+B; // sum of two numbers
+        let Dif=A-B; // Difference of two numbers
+        let Prod=A*B; // product of two numbers
+        let Div=A/B; // quotient of two two numbers
+        let Mod=A%B // remainder of two numbers
+        console.log("10+20=",Sum);
+        console.log("10-20=",Dif);
+        console.log("10*20=",Prod);
+        console.log("10/20=",Div);
+        console.log("10%20=",Mod);
+
+        // Exponent
+        console.log("2 raise to 3 : ",2**3);
+        console.log("(10+5)*2)=",(10+5)*2);// Arithmetic expressions
+        //assignment operators
+        let x=10;
+        console.log("x+=5 =>",x+=5);
+        console.log("x-=3 =>",x-=3);
+        console.log("x*=4 =>",x*=4);
+        console.log("x/=2 =>",x/=2);
+        console.log("x%=6 =>",x%=6);
+        //string concatenation using assignment operator 
+        let StringA= "Sruthy";
+        console.log(StringA+="Ratheesh");
+        let greeting = "Hello";
+        greeting += ", World!";
+        console.log(greeting); // Output: Hello, World!
+        
+
+
+
+
+
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
