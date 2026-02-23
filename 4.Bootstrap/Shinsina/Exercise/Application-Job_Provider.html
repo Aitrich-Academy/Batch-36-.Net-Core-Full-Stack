@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>applicatipn-job_provider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+     <style>
+          body{
+            margin: 0;
+        }
+        .sidebar{
+             background: #2f6fa3;
+             color: white;
+             text-align: center;
+             min-height: 100vh;
+             padding: 30px;
+              transition: transform 0.3s ease;
+            z-index: 1050;
+            overflow-y: auto;
+        }
+         .sidebar::-webkit-scrollbar {
+            width: 0px;
+             background: transparent;
+         }
+        .profile-image{
+            width: 100px;
+        }
+          .nav {
+            padding-left: 20px; 
+            padding-top: 30px;
+            text-align: left;
+        }
+        .nav a { 
+            color: white;
+            text-decoration: none; 
+        }
+        .nav-icon {
+             width: 20px; 
+        }
+         .navbar{
+            background-color:#ede9e9 ;
+        }
+        .form-control.mt-2:focus {
+           border-color: #007bff;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.25);
+           outline: none;
+           transform: translateY(-1px);
+        }
+        .form-control.mt-2 {
+            border: 2px solid #eee;
+            border-radius: 10px;
+            padding: 12px 20px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+      
+        .col-sm-6{
+             background-color: #faf7f7;
+        min-height: 68vh;
+        }
+       .col-sm-4 {
+  background-color: #2f6fa3;
+  background-image: url(images/apply-now-2.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 68vh; /* ensures visibility */
+}
+     .footer {
+             height: 160px;
+             background: #2f6fa3;
+             width: 100%;
+            background-image: url(images/Decoration.png);
+            /* Add these for responsiveness */
+             background-size: cover;       /* Forces image to fill the area */
+              background-position: center; /*  Keeps the focus in the middle */
+             background-repeat: no-repeat; /* Prevents tiling on wide screens */
+             }
+               /* MOBILE (iPhone SE) */
+        @media (min-width: 768px) {
+            .sidebar {
+                position: sticky;
+                top: 0;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .sidebar {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 250px;
+                height: 100%;
+                transform: translateX(-100%); /* Hidden by default on mobile */
+            }
+
+            .sidebar.show {
+                transform: translateX(0); /* Slide in */
+                box-shadow: 4px 0 10px rgba(0,0,0,0.2);
+            }
+        }
+     </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-12 col-sm-3 col-md-3 sidebar" id="sidebar">
+                 <div class="d-flex justify-content-end p-2 d-sm-none">
+                      <button class="btn btn-sm close-btn text-white" onclick="toggleSidebar()">
+                          <i class="bi bi-x-lg fs-4"></i>
+                      </button>
+                  </div>
+
+
+                 <div>
+                     <img src="images/profile.jpg" class="profile-image rounded-circle">
+                 </div>
+                 <form >
+                    <ul class="nav flex-column mb-auto pt-5 ">
+                        <li class="nav-item"><a href="DashBoard-Job-Provider.html" class="nav-link"><img src="images/dashboard 1.png" class="nav-icon me-2">Dashboard</a></li>
+                        <li class="nav-item"><a href="Company-Job-Provider.html" class="nav-link"><img src="images/question (1) 1.png" class="nav-icon me-2">Company</a></li>
+                        <li class="nav-item"><a href="Jobs-Job_Provider.html" class="nav-link"><img src="images/suitcase 2.png" class="nav-icon me-2"> Jobs</a></li>
+                        <li class="nav-item"><a href="Application-Job_Provider.html" class="nav-link"><img src="images/application (1) 1.png" class="nav-icon me-2"> Applications</a></li>
+                        <li class="nav-item"><a href="Interview-Job_Provider.html" class="nav-link"><img src="images/question (1) 1.png" class="nav-icon me-2"> Interviews</a></li>
+                        <li class="nav-item"><a href="messages-job-provider.html" class="nav-link"><img src="images/message 1.png" class="nav-icon me-2"> Messages</a></li>
+                    </ul>
+                 </form>
+                 <div class="add-new pt-5">
+                    <a href="Add-New-Job-Provider.html"><img src="images/add-group (1) 1.png" alt="Add" class="me-2"></a>
+                    <div>Add New</div>
+                 </div>
+            </div>
+
+            <div class="col-12 col-sm-9 rightside">
+                <nav class="navbar mt-3 w-100">
+                    <div class="container-fluid">
+
+                        <button class="btn  side-button btn-outline-primary btn-sm d-md-none" onclick="toggleSidebar()">
+                         <i class="bi bi-list"></i>
+                        </button>
+
+                        <div class="col text-end">
+                            <img src="images/bell.png" alt="bell" class="rounded-circle nav-icon mx-1">
+                            <img src="images/cheerful.png" alt="Olivia" class="rounded-circle nav-icon mx-1">
+                            <img src="images/logout.png" alt="logout" class="rounded-circle nav-icon mx-1">
+                            <span class="ms-1">Logout</span>
+                        </div>
+                   </div>
+                </nav>
+                 
+                <div  class="p-4 col-sm-9 mt-3 ">
+                <form >
+                    <label for="find-applctn">Find Application</label>
+                    <input type="text" class="form-control mt-2" id="find-applctn" placeholder="type here...">
+                </form>
+                </div>
+
+                <div class=" d-flex   p-4">
+                    <div class="col-sm-6 p-1">Showing Applications</div>
+                    <div class="col-sm-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("show");
+          }
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
