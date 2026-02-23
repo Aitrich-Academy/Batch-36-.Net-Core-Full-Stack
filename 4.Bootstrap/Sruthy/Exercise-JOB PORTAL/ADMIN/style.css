@@ -1,0 +1,358 @@
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: #0b3c78;
+      min-height: 100vh;
+      color: white;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      font-size: 17px;
+    }
+
+    .sidebar a:hover {
+      background-color: #0a3263;
+    }
+
+    .sidebar i {
+      margin-right: 10px;
+    }
+    /* Sidebar base */
+.sidebar {
+  min-height: 100vh;
+  /* background-color: #f8f9fa; */
+}
+
+/* smaller device sidebar */
+@media (max-width: 767px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    z-index: 1050;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+}
+
+/* smaller device main content  */
+@media (max-width: 767px) {
+  .main-content {
+    padding: 1rem !important;
+  }
+}
+
+/* Overlay */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1040;
+  display: none;
+}
+
+/* Show overlay when active */
+#overlay.show {
+  display: block;
+}
+
+    /* Cards */
+    .stat-card {
+      background-color: #0b3c78;
+      color: white;
+      border-radius: 1px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;          /* make card slightly smaller */
+      max-width: 300px;
+      height: 120px;
+    }
+
+    .stat-card h3 {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .stat-icon {
+      font-size: 35px;
+      opacity: 0.8;
+    }
+
+    /* Chart placeholder */
+    .chart-box {
+      background-color: white;
+      border-radius: 5px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    h1{
+        color: #0a3263;
+        font-weight: bolder;
+        padding: 15px;
+    }
+    h4{
+        font-weight: bolder;
+        padding: 15px;
+    }
+    .chart-box {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        height: 350px;
+    }
+    .main-content {
+  background-color: #f2f2f2;
+  min-height: 100vh;
+}
+
+/* Provider cards */
+.provider-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 13px;
+  height: 100%;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.provider-card p {
+  margin-bottom: 4px;
+}
+
+/* Card action icons */
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #c0392b;
+  font-size: 16px;
+}
+/* Suggestion pills */
+.suggestion-pill {
+  background-color: #e6dbff;
+  color: #5a2ea6;
+  padding: 6px 14px;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+/* Job cards */
+.job-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 13px;
+  height: 100%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.job-card p {
+  margin-bottom: 5px;
+}
+
+
+.messages-wrapper {
+  background: #fff;
+  padding: 20px;
+}
+
+/* Container */
+.message-box {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+/* LEFT PANEL */
+.message-list {
+  background: #fafafa;
+  border-right: 1px solid #eee;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.list-header {
+  padding: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.message-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.message-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.message-item h6 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.message-item small {
+  color: #777;
+}
+
+.message-item .time {
+  margin-left: auto;
+  font-size: 11px;
+  color: #888;
+}
+
+.message-item.active {
+  background: #eef2ff;
+}
+
+/* RIGHT PANEL */
+.chat-area {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+/* Chat Header */
+.chat-header {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Chat Body */
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  background: #f7f7f7;
+  overflow-y: auto;
+}
+
+.chat-msg {
+  max-width: 75%;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.chat-msg.received {
+  background: #e5e5e5;
+}
+
+.chat-msg.sent {
+  background: #1e40af;
+  color: #fff;
+  margin-left: auto;
+}
+
+/* Chat Input */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+.chat-input button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: #1e40af;
+}
+
+.skill {
+  background-color: #f2f2f2;      /* light grey */
+  border: none;                   /* remove all borders */
+  border-bottom: 3px solid #b5b5b5; /* thicker underline */
+  border-radius: 0;               /* square edges */
+  padding: 12px 10px;
+}
+
+.skill:focus {
+  background-color: #f2f2f2;
+  box-shadow: none;               /* remove bootstrap blue glow */
+  border-bottom-color: #6c757d;   /* darker grey on focus */
+}
+
+.skill-desc {
+  background-color: #f2f2f2;
+  border: none;
+  border-bottom: 3px solid #b5b5b5;
+  border-radius: 0;
+  height: 90px;          /* custom height */
+  resize: none;          /* prevent resize */
+  padding: 12px;
+}
+
+.skill-desc:focus {
+  background-color: #f2f2f2;
+  box-shadow: none;
+  border-bottom-color: #6c757d;
+}
+
+
+.pref{
+  background-color: white;
+}
+
+.skill-card {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.skill-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.skill-desc {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 12px;
+}
+
+.delete-icon {
+  color: #dc3545;      /* red */
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.delete-icon:hover {
+  color: #b02a37;
+}
+

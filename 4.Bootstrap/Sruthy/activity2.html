@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOTSTRAP Activity 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .first{
+            background-color: rgb(204, 175, 136);
+            text-align: center;
+        }
+        .second{
+            background-color: rgb(165, 197, 186);
+            text-align: center;
+        }
+        .box1{
+            background-color: rgb(93, 93, 245);
+            text-align: center;
+        }
+        .box2{
+            background-color: rgb(121, 187, 129);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- #1 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 first">4/12</div>
+            <div class="col-sm-8 second">8/12</div>
+        </div>
+    </div>
+    <br><br>
+    <!-- #2 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 box1">1</div>
+            <div class="col-md-3 box2">2</div>
+            <div class="col-md-3 box1">3</div>
+            <div class="col-md-3 box2">4</div>
+    </div>
+    <br><br>
+
+    <!-- #3 -->
+    <div class="container first">
+        <div class="row ">
+            Main column 1 
+        
+            <!-- Main column 2 with nested row -->
+            <div class="col-md-6 second">
+            Parent Column
+
+            <div class="row mt-2 box1">
+                <div class="col-sm-6 box2">
+                Sub Column 1
+                </div>
+                <div class="col-sm-6 box3">
+                Sub Column 2
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- #4  -->
+     <div class="container ">
+  <div class="row">
+    
+    <!-- Hidden on small, visible on md and above -->
+    <div class="col-md-4 d-none d-md-block">
+      First Column (hidden on small screens)
+    </div>
+
+    <!-- Always visible -->
+    <div class="col-md-8">
+      Second Column
+    </div>
+
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
+</body>
+</html>
