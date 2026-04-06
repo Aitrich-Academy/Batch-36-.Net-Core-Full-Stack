@@ -18,7 +18,7 @@ namespace CompanyMemberRegistration.Manager
 	public class CompanyManager : IMenu
 	{
 
-		CompanyRepository companyRepository=new CompanyRepository();
+		 CompanyRepository companyRepository=new CompanyRepository();
 		CompanyManager cmpmanager;
 		Lists list = new Lists();
 		IMenu menu;
