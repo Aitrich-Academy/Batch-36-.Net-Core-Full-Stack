@@ -1,0 +1,41 @@
+﻿@page
+@model basic_razor.Pages.Provider.CreateModel
+@{
+}
+<h2>Add Employees</h2>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+<form method="post">
+    @* <div>
+        <label>Id</label>
+        <input asp-for="Employees.Id" />
+    </div> *@
+
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Employees.Name" class="form-control" />
+        <span asp-validation-for="Employees.Name"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Salary</label>
+        <input asp-for="Employees.Salary" class="form-control"/>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-page="/Provider/Index" class="btn btn-secondary">
+        Back
+    </a>
+   
+</form>

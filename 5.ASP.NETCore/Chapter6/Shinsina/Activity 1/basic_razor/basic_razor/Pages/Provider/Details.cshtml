@@ -1,0 +1,25 @@
+﻿@page
+@model basic_razor.Pages.Provider.DetailsModel
+@{
+}
+
+@if (Model.Employee != null)
+{
+    <h3>Employee Details</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+        <tr>
+            <td>@Model.Employee.Id</td>
+            <td>@Model.Employee.Name</td>
+            <td>@Model.Employee.Salary</td>
+        </tr>
+    </table>
+    <a asp-page="/Provider/Index" class="btn btn-secondary">
+        Back
+    </a>
+    
+}

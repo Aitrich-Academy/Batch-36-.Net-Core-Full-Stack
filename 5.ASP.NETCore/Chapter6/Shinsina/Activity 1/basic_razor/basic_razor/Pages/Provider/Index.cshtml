@@ -1,0 +1,32 @@
+﻿@page
+@model basic_razor.Pages.Provider.IndexModel
+
+<h1>Welcome Employee</h1>
+<a asp-page="Create" class="mt-3">
+    add new employee
+</a>
+<table border="1" class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+
+@foreach (var emp in Model.Employees)
+{
+    <tr>
+        <td>@emp.Id</td>
+        <td>@emp.Name</td>
+        <td>@emp.Salary</td>
+        <td>
+            <a asp-page="Edit" asp-route-id="@emp.Id">Edit</a>
+        </td>
+        <td>
+            <a asp-page="Details" asp-route-id="@emp.Id">Details</a>
+        </td>
+        <td>
+            <a asp-page="Delete" asp-route-id="@emp.Id">Delete</a>
+        </td>
+    </tr>
+    }
+</table>
