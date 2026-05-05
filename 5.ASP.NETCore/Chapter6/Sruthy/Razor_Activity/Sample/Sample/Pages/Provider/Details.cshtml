@@ -1,0 +1,12 @@
+﻿@page
+@model Sample.Pages.Provider.DetailsModel
+@{
+}
+<h3>Employee Details</h3>
+
+<div>
+    <p><strong>ID:</strong> @Model.Employee.Id</p>
+    <p><strong>Name:</strong> @Model.Employee.Name</p>
+    <p><strong>Salary:</strong> @Model.Employee.Salary</p>
+</div>
+<a asp-page="/Provider/Index" class="btn btn-secondary">Back to Employees List</a>
