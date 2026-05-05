@@ -1,0 +1,31 @@
+﻿@page
+@model basic_razor.Pages.Provider.DeleteModel
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+    <div>
+        <a asp-page="/Provider/Index" class="btn btn-secondary">
+            Back
+        </a>
+    </div>
+}
+
+
+
+@if (Model.Employee != null)
+{
+    <h3>Are you sure you want to delete?</h3>
+    <p><b>Id:</b> @Model.Employee.Id</p>
+    <p><b>Name:</b> @Model.Employee.Name</p>
+    <p><b>Salary:</b> @Model.Employee.Salary</p>
+
+    <form method="post">
+        <input type="hidden" asp-for="Employee.Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-page="/Provider/Index" class="btn btn-secondary">
+            Cancel
+        </a>
+    </form>
+}
