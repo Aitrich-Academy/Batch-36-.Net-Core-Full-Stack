@@ -1,0 +1,20 @@
+﻿@page
+@model razorasync.Pages.tourBook.IndexModel
+
+<h2>Tours</h2>
+<a asp-page="Create">Add New Tour</a>
+<table>
+    <tr><th>Destination</th><th>Price</th><th>Available Slots</th><th>Actions</th></tr>
+    @foreach (var tour in Model.Tours)
+    {
+        <tr>
+            <td>@tour.Destination</td>
+            <td>@tour.Price</td>
+            <td>@tour.AvailableSlots</td>
+            <td>
+                <a asp-page="Edit" asp-route-id="@tour.Id">Edit</a> |
+                <a asp-page="Delete" asp-route-id="@tour.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

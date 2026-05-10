@@ -1,0 +1,14 @@
+﻿@page
+@model razorasync.Pages.tourBook.DeleteModel
+
+<h2>Delete Tour</h2>
+
+<div>
+    <p>Are you sure you want to delete this tour?</p>
+    <p><strong>@Model.Tour.Destination</strong> - Price: @Model.Tour.Price, Slots: @Model.Tour.AvailableSlots</p>
+</div>
+
+<form method="post">
+    <button type="submit">Delete</button>
+    <a asp-page="Index">Cancel</a>
+</form>

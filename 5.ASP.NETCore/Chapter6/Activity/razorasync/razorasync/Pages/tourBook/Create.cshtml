@@ -1,0 +1,31 @@
+﻿@page
+@model razorasync.Pages.tourBook.CreateModel
+
+
+<h2>Add New Tour</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Tour.Destination"></label>
+        <input asp-for="Tour.Destination" />
+        <span asp-validation-for="Tour.Destination"></span>
+    </div>
+
+    <div>
+        <label asp-for="Tour.Price"></label>
+        <input asp-for="Tour.Price" />
+        <span asp-validation-for="Tour.Price"></span>
+    </div>
+
+    <div>
+        <label asp-for="Tour.AvailableSlots"></label>
+        <input asp-for="Tour.AvailableSlots" />
+        <span asp-validation-for="Tour.AvailableSlots"></span>
+    </div>
+
+    <button type="submit">Save</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
