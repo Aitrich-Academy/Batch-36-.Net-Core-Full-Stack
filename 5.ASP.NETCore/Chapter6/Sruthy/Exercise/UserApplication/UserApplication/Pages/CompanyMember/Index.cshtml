@@ -1,0 +1,40 @@
+﻿@page
+@model UserApplication.Pages.CompanyMember.IndexModel
+@{
+}
+ <h2>Welcome @Model.UserName !!!!</h2>
+
+<a asp-page="Create" class="btn btn-primary">
+    Add New Company Member
+</a>
+
+<br />
+<br />
+
+<table border="1" width="100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Designation</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.Members)
+        {
+            <tr>
+                <td>@item.MemberName</td>
+                <td>@item.Email</td>
+                <td>@item.Designation</td>
+
+                <td>
+                    <a asp-page="Update" asp-route-id="@item.CompanyMemberId">Update</a>
+                    |
+                    <a asp-page="Delete" asp-route-id="@item.CompanyMemberId">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 

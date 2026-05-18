@@ -1,0 +1,15 @@
+﻿@page
+@model JobPortal.Pages.Job.CreateModel
+@{
+}
+<form method="post" class="form-group">
+    <label>Job Title:</label>
+    <input asp-for="Job.Title" class="form-control" />
+    <label>Company Name:</label>
+    <input asp-for="Job.CompanyName" class=" form-control" />
+    <label>Location:</label>
+    <input asp-for="Job.Location" class=" form-control" />
+    <label>Salary:</label>
+    <input asp-for="Job.Salary" class=" form-control" />
+    <button type="submit">Save</button>
+</form>

@@ -1,0 +1,20 @@
+﻿@page
+@model UserApplication.Pages.CompanyMember.CreateModel
+@{
+}
+<h2>Add Company Member</h2>
+
+<form method="post">
+
+    <input asp-for="Member.MemberName" placeholder="Name" />
+    <br />
+
+    <input asp-for="Member.Email" placeholder="Email" />
+    <br />
+
+    <input asp-for="Member.Designation" placeholder="Designation" />
+    <br />
+
+    <button type="submit">Save</button>
+
+</form>

@@ -1,0 +1,29 @@
+﻿@page
+@model UserApplication.Pages.CompanyMember.UpdateModel
+@{
+}
+
+<h2>Update Company Member</h2>
+
+<form method="post">
+
+    <div>
+        <label>Name</label>
+        <input asp-for="Member.MemberName" />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Member.Email" />
+    </div>
+
+    <div>
+        <label>Designation</label>
+        <input asp-for="Member.Designation" />
+    </div>
+
+    <button type="submit">Update</button>
+
+</form>
+
+<a asp-page="Index">Back</a>
