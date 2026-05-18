@@ -1,0 +1,33 @@
+﻿@page
+@model JobPortal.Pages.Job.IndexModel
+@{
+}
+<h1>Job List</h1><br />
+<table border="1" class="table">
+    <tr>
+        <th>Job ID</th>
+        <th>Job Title</th>
+        <th>Company Name</th>
+        <th>Location</th>
+        <th>Salary</th>
+    </tr>
+
+    @foreach (var item in Model.Job)
+    {
+        //c#
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Title</td>
+            <td>@item.CompanyName</td>
+            <td>@item.Location</td>
+            <td>@item.Salary</td>
+            <td><a asp-page="Edit" asp-route-id="@item.Id">Edit</a></td>
+            <td><a asp-page="Delete" asp-route-id="@item.Id">Delete</a></td>
+        </tr>
+  
+    }
+</table>
+
+<a asp-page="Create">Add New Student</a>
+
+ 

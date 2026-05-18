@@ -1,0 +1,34 @@
+﻿@page
+@model JobPortal.Pages.Job.EditModel
+@{
+}
+<h2>Edit Job</h2>
+
+<form method="post" class="form-group">
+    
+    <!-- Hidden ID -->
+    <input type="hidden" asp-for="Job.Id" />
+
+    <div>
+        <label>Title</label>
+        <input asp-for="Job.Title" class="form-control" />
+    </div>
+
+    <div>
+        <label>Company Name</label>
+        <input asp-for="Job.CompanyName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Location</label>
+        <input asp-for="Job.Location" class="form-control" />
+    </div>
+
+    <div>
+        <label>Salary</label>
+        <input asp-for="Job.Salary" class="form-control" />
+    </div>
+
+    <br />
+    <button type="submit">Update</button>
+</form>

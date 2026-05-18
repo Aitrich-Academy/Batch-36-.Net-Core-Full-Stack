@@ -1,0 +1,11 @@
+﻿@page
+@model LibrarySystem.Pages.Library_System.DeleteBookModel
+@{
+}
+<h2>Are you sure want to delete </h2>
+<p>@Model.Book.Title</p>
+
+<form method="post">
+    <button type="submit">Delete</button>
+    <a asp-page="/Library System/Index">Cancel</a>
+</form>

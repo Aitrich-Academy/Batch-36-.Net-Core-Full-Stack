@@ -1,0 +1,13 @@
+﻿@page
+@model Sample.Pages.Provider.EditModel
+@{
+}
+<h2>Enter The Id of the Employee:</h2>
+<form method="post">
+    <input asp-for="Employee.Id" class="form-group" readonly/>
+    <label>New Name:</label>
+    <input asp-for="Employee.Name" class="form-group" />
+    <label>Updated Salary:</label>
+    <input asp-for="Employee.Salary" class="form-group" />
+    <button type="submit">Update</button>
+</form>

@@ -1,0 +1,15 @@
+﻿@page
+@model JobPortal.Pages.Job.DeleteModel
+@{
+}
+<h1>Delete Job</h1>
+<h2>Are you sure want to delete this job?</h2>
+<div>
+    <p><b>Name:</b> @Model.Job.Title</p>
+    <p><b>Address:</b> @Model.Job.CompanyName</p>
+    <p><b>Phone:</b> @Model.Job.Location</p>
+</div>
+<form method="post">
+    <button type="submit">Delete</button>
+    <a asp-page="Index">Cancel</a>
+</form>
