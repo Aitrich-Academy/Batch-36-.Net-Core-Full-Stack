@@ -1,0 +1,22 @@
+﻿@page
+@model Job_Portal_RazorExce.Pages.Job.AppliedJobsModel
+@{
+}
+
+
+<h2>Applied Jobs</h2>
+
+<table border="1" class="table table-bordered">
+    <tr>
+        <th>Title</th>
+        <th>Company</th>
+    </tr>
+
+@foreach (var job in Model.AppliedJobs)
+{
+    <tr>
+        <td>@job.Title</td>
+        <td>@job.Company</td>
+    </tr>
+}
+</table>

@@ -1,0 +1,31 @@
+﻿@page
+@model Job_Portal_RazorExce.Pages.Login.LoginModel
+
+<h2>Login</h2>
+
+<form method="post">
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="User.Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Password</label>
+        <input asp-for="User.Password"
+               type="password"
+               class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Login
+    </button>
+
+</form>
+
+@if (Model.ErrorMessage != null)
+{
+    <div class="alert alert-danger mt-2">
+        @Model.ErrorMessage
+    </div>
+}

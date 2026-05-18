@@ -1,0 +1,58 @@
+﻿@page
+@model Workshop_1.Pages.Student.EditModel
+@{
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+    <a asp-page="/Student/Index">
+        <button type="button" class="btn btn-secondary">Back</button>
+    </a>
+}
+else
+{
+    <h2>Update Student Details</h2>
+    <form method="post">
+        <table class="table table-bordered">
+
+            <tr>
+                <td><b>Id:</b></td>
+                <td>
+                    @Model.Student.ID
+                    <input type="hidden" asp-for="Student.ID" />
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Name:</label></td>
+                <td><input asp-for="Student.Name" /></td>
+            </tr>
+
+            <tr>
+                <td><label>Address:</label></td>
+                <td><input asp-for="Student.Address" /></td>
+            </tr>
+
+            <tr>
+                <td><label>Class:</label></td>
+                <td><input asp-for="Student.Class" /></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button type="submit" class="btn btn-success">Update</button>
+                    <a asp-page="/Student/Index">
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                    </a>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+}
+
+ 
+
+    

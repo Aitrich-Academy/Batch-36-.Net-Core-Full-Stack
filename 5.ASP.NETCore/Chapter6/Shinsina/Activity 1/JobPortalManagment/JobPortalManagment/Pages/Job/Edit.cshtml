@@ -1,0 +1,62 @@
+﻿@page
+@model JobPortalManagment.Pages.Job.EditModel
+@{
+}
+<h2>Edit Job Post</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Job.ID" />
+
+    <div class="form-group">
+        <label asp-for="Job.Title" class="control-label"></label>
+        <input asp-for="Job.Title" class="form-control" />
+        <span asp-validation-for="Job.Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Job.Company" class="control-label"></label>
+        <input asp-for="Job.Company" class="form-control" />
+        <span asp-validation-for="Job.Company" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Job.Location" class="control-label"></label>
+        <input asp-for="Job.Location" class="form-control" />
+        <span asp-validation-for="Job.Location" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Job.EnvironmentType" class="control-label"></label>
+        <select asp-for="Job.EnvironmentType" class="form-control">
+            <option value="Full-time">Full-time</option>
+            <option value="Part-time">Part-time</option>
+            <option value="Contract">Contract</option>
+        </select>
+        <span asp-validation-for="Job.EnvironmentType" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Job.Salary" class="control-label"></label>
+        <input asp-for="Job.Salary" class="form-control" />
+        <span asp-validation-for="Job.Salary" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Job.Description" class="control-label"></label>
+        <textarea asp-for="Job.Description" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="Job.Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Job.Requirements" class="control-label"></label>
+        <textarea asp-for="Job.Requirements" class="form-control" rows="3"></textarea>
+        <span asp-validation-for="Job.Requirements" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">Save Changes</button>
+    <a asp-page="Index" class="btn btn-secondary mt-3">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

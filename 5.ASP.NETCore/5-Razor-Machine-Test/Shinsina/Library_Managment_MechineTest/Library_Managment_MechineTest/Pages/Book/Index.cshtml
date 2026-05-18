@@ -1,0 +1,36 @@
+﻿@page
+@model Library_Managment_MechineTest.Pages.Book.BooksModel
+@{
+}
+<h2>List Of Books Available</h2>
+@if (Model.Role == "Admin")
+{
+    <a class="btn btn-primary" href="/Book/AddBooks">Add Books</a>
+   
+}
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Quantity</th>
+    </tr>
+
+    @foreach(var item in Model.Books)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Title</td>
+            <td>@item.Author</td>
+            <td>@item.Quantity</td>
+            <td>
+                 @if (Model.Role == "Admin")
+                {
+                    <a class="btn btn-primary" href="/Book/AddBooks">Add Books</a>
+                    <a class="btn btn-danger" href="/Book/Delete">Delete</a>
+                    <a class="btn btn-primary" href="/Book/Details">Details</a>
+                } 
+            </td>
+        </tr>
+    }
+</table>

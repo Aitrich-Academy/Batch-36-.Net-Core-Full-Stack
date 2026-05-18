@@ -1,0 +1,59 @@
+﻿@page
+@model Workshop_1.Pages.Student.IndexModel
+@{
+}
+<h1>List Of Students</h1>
+<a asp-page="Create" class="mt-3">
+  Add New Student
+</a>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+<div style="display:flex; justify-content: space-between; align-items:center; margin-bottom:15px;">
+
+    <div></div>
+
+    <form method="get" style="display:flex; gap:10px; align-items:center;">
+        <input type="number" name="SearchId" placeholder="Enter Student ID" value="@Model.SearchId" />
+        <button type="submit" class="btn btn-success">Search</button>
+
+        <!-- ✅ BACK BUTTON (only shows after search) -->
+        @if (Model.SearchId.HasValue)
+        {
+            <a asp-page="Index" class="btn btn-secondary">Back</a>
+        }
+    </form>
+
+</div>
+<table border="1" class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Class</th>
+    </tr>
+
+    @foreach (var emp in Model.Students)
+    {
+        <tr>
+            <td>@emp.ID</td>
+            <td>@emp.Name</td>
+            <td>@emp.Address</td>
+            <td>@emp.Class</td>
+            <td>
+                <a asp-page="Edit" asp-route-id="@emp.ID">Edit</a>
+            </td>
+            <td>
+                <a asp-page="Details" asp-route-id="@emp.ID">Details</a>
+            </td>
+            <td>
+                <a asp-page="Delete" asp-route-id="@emp.ID">Delete</a>
+            </td>
+        </tr>
+
+    }
+</table>
