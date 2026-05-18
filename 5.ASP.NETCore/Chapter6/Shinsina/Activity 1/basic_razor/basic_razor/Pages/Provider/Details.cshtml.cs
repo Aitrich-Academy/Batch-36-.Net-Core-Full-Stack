@@ -15,10 +15,7 @@ namespace basic_razor.Pages.Provider
         [BindProperty]
 
         public Employee Employee { get; set; }
-        //public void OnGet()
-        //{
-        //    Employee = _context.Employee.ToList();
-        //}
+       
         public void OnGet(int id)
         {
             Employee = _context.Employees

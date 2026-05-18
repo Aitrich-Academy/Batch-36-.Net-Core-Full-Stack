@@ -1,0 +1,12 @@
+﻿@page
+@model Library_Managment_MechineTest.Pages.User.LoginModel
+@{
+}
+<h2>Login</h2>
+<form method="post">
+<input  asp-for="UserName" placeholder="UserName"/>
+<input  asp-for="Password" placeholder="Password" type="password"/>
+    <a class="btn btn-success" href="/Book/Index">Login</a>
+
+</form>
+<p style="color:red">@ViewData["Error"]</p>

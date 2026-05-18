@@ -1,0 +1,29 @@
+﻿@page
+@model Workshop_1.Pages.Student.DeleteModel
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+    <div>
+        <a asp-page="/Student/Index" class="btn btn-secondary">
+            Back
+        </a>
+    </div>
+}
+@if (Model.Student != null)
+{
+    <h3>Are you sure you want to delete?</h3>
+    <p><b>Id:</b> @Model.Student.ID</p>
+    <p><b>Name:</b> @Model.Student.Name</p>
+    <p><b>Address:</b> @Model.Student.Address</p>
+    <p><b>Class:</b>@Model.Student.Class</p>
+
+    <form method="post">
+        <input type="hidden" asp-for="Student.ID" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-page="/Student/Index" class="btn btn-secondary">
+            Cancel
+        </a>
+    </form>
+}

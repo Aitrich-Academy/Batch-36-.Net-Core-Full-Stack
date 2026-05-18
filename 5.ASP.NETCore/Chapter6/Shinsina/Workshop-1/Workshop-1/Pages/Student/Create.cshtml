@@ -1,0 +1,44 @@
+﻿@page
+@model Workshop_1.Pages.Student.CreateModel
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+   
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+<h2>Add Student</h2>
+
+<form method="post">
+  
+
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Students.Name" class="form-control" />
+        <span asp-validation-for="Students.Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Address</label>
+        <input asp-for="Students.Address" class="form-control" />
+        <span asp-validation-for="Students.Address" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Class</label>
+        <input asp-for="Students.Class" class="form-control" />
+        <span asp-validation-for="Students.Class" class="text-danger"></span>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-page="/Student/Index" class="btn btn-secondary">
+        Back
+    </a>
+   
+</form>

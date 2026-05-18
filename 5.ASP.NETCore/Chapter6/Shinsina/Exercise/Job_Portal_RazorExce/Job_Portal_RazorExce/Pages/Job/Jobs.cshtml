@@ -1,0 +1,82 @@
+﻿@page
+@model Job_Portal_RazorExce.Pages.Job.JobsModel
+
+<h2>Job Listings</h2>
+<h4>
+    Welcome @Model.Username
+</h4>
+<table class="table table-bordered">
+    <tr>
+        <th>
+        </<div class="d-flex justify-content-end mb-3">
+        <a asp-page="/Job/AppliedJobs" class="btn btn-primary">Applied Jobs</a>
+    </div>
+        </th>
+    </tr>
+    <tr>
+        <th>Title</th>
+        <th>Company</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+
+    @if (Model.Jobs != null && Model.Jobs.Any())
+    {
+        foreach (var job in Model.Jobs)
+        {
+            <tr>
+
+                <td>@job.Title</td>
+
+                <td>@job.Company</td>
+
+                <td>
+                    @if (job.IsApplied)
+                    {
+                        <span style="color:green">Applied</span>
+                    }
+                    else
+                    {
+                        <span style="color:red">Not Applied</span>
+                    }
+                </td>
+
+                <td>
+
+                    @if (!job.IsApplied)
+                    {
+                        <form method="post" asp-page-handler="Apply">
+
+                            <input type="hidden"
+                                   name="jobId"
+                                   value="@job.Id" />
+
+                            <button type="submit">
+                                Apply
+                            </button>
+
+                        </form>
+                    }
+                    else
+                    {
+                        <button disabled>
+                            Applied
+                        </button>
+                    }
+
+                </td>
+
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td colspan="4">
+                No Jobs Found
+            </td>
+        </tr>
+    }
+   
+</table>
+<a asp-page="/Register/Register" class="btn btn-danger">Logout</a>

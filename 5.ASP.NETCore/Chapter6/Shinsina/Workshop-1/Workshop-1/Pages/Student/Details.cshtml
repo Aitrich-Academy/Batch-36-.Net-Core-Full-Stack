@@ -1,0 +1,27 @@
+﻿@page
+@model Workshop_1.Pages.Student.DetailsModel
+@{
+}
+
+@if (Model.Student != null)
+{
+    <h2>Details of Student</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Class</th>
+        </tr>
+        <tr>
+            <td>@Model.Student.ID</td>
+            <td>@Model.Student.Name</td>
+            <td>@Model.Student.Address</td>
+            <td>@Model.Student.Class</td>
+        </tr>
+    </table>
+    <a asp-page="/Student/Index" class="btn btn-secondary">
+        Back
+    </a>
+    
+}

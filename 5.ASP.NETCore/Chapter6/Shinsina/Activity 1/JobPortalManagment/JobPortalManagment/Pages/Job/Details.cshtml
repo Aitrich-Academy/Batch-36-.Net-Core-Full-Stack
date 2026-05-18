@@ -1,0 +1,33 @@
+﻿@page
+@model JobPortalManagment.Pages.Job.DetailsModel
+@{
+}
+<h2>Job Details</h2>
+
+<div class="card p-4">
+
+    <p>
+        <strong>Id :</strong>
+        @Model.Job.ID
+    </p>
+
+    <p>
+        <strong>Title :</strong>
+        @Model.Job.Title
+    </p>
+
+    <p>
+        <strong>Company :</strong>
+        @Model.Job.Company
+    </p>
+
+    <p>
+        <strong>Salary :</strong>
+        @Model.Job.Salary
+    </p>
+
+    <a asp-page="Index" class="btn btn-primary">
+        Back
+    </a>
+
+</div>
