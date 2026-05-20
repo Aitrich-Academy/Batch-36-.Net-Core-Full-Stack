@@ -1,0 +1,34 @@
+﻿@page 
+@model Library_Managment_MechineTest.Pages.Book.DeleteModel
+@{
+}
+
+<h2>Delete Book</h2>
+
+<div class="alert alert-danger">
+    Are you sure you want to delete this book?
+</div>
+
+<div class="card p-3">
+
+    <p><strong>Title:</strong> @Model.Book.Title</p>
+
+    <p><strong>Author:</strong> @Model.Book.Author</p>
+
+    <p><strong>Quantity:</strong> @Model.Book.Quantity</p>
+
+</div>
+
+<br />
+
+<form method="post">
+    <input type="hidden" name="id" value="@Model.Book.ID" />
+
+    <button type="submit" class="btn btn-danger">
+        Delete
+    </button>
+
+    <a href="/Book/Index" class="btn btn-secondary">
+        Cancel
+    </a>
+</form>

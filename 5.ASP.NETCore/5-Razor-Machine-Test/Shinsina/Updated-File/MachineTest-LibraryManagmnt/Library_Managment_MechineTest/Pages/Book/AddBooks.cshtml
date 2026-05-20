@@ -1,0 +1,51 @@
+﻿@page
+@model Library_Managment_MechineTest.Pages.Book.AddBooksModel
+@{
+}
+
+<h2>Add Book</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+<form method="post">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Book.Title" class="form-label"></label>
+
+        <input asp-for="Book.Title"
+               class="form-control"
+               placeholder="Enter Book Title" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Book.Author" class="form-label"></label>
+
+        <input asp-for="Book.Author"
+               class="form-control"
+               placeholder="Enter Author Name" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Book.Quantity" class="form-label"></label>
+
+        <input asp-for="Book.Quantity"
+               class="form-control"
+               placeholder="Enter Quantity" />
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Add
+    </button>
+
+    <a class="btn btn-primary" href="/Book/Index">
+        Back
+    </a>
+
+</form>
