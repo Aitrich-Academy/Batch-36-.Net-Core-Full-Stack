@@ -1,0 +1,24 @@
+﻿@page
+@model Library_Managment_MechineTest.Pages.Book.DetailsModel
+@{
+}
+
+<h2>Book Details</h2>
+
+<div class="card p-3 shadow-sm">
+
+    <p><strong>ID:</strong> @Model.Book.ID</p>
+
+    <p><strong>Title:</strong> @Model.Book.Title</p>
+
+    <p><strong>Author:</strong> @Model.Book.Author</p>
+
+    <p><strong>Quantity:</strong> @Model.Book.Quantity</p>
+
+</div>
+
+<br />
+
+<a href="/Book/Index" class="btn btn-secondary">
+    Back
+</a>
