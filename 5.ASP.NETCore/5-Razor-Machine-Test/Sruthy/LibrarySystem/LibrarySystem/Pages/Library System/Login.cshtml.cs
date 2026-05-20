@@ -33,9 +33,9 @@ namespace LibrarySystem.Pages.Library_System
                 HttpContext.Session.SetString("Role", user.Role);
                 if(user.Role=="Admin")
                 {
-                    return RedirectToPage("/Library System/AdminHome");
+                    return RedirectToPage("/LibrarySystem/AdminHome");
                 }
-                return RedirectToPage("/Library System/UserHome");
+                return RedirectToPage("/LibrarySystem/UserHome");
             }
             Message = "Invalid Login";
             return Page();
