@@ -1,0 +1,20 @@
+﻿@page "/Student"
+<h3>Student Details</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+    </tr>
+    <tr>
+        <td>@Name</td>
+        <td>@Age</td>
+        <td>@Address</td>
+    </tr>
+</table>
+<Course/>
+@code {
+    string Name = "Geetha";
+    int Age = 12;
+    string Address = "xyz";
+}
