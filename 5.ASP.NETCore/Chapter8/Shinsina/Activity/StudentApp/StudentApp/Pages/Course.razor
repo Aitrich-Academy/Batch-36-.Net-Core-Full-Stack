@@ -1,0 +1,17 @@
+﻿@page "/Course"
+
+<h3>Course</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>Course Name</th>
+        <th>Course Duration</th>
+    </tr>
+    <tr>
+        <td>@CourseName</td>
+        <td>@CourseDuration</td>
+    </tr>
+</table>
+@code {
+    string CourseName="Data Science";
+    string CourseDuration = "10 Days";
+}
