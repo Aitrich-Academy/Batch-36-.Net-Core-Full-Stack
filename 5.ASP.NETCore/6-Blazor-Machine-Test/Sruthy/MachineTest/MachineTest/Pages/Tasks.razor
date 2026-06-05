@@ -1,0 +1,120 @@
+﻿
+@page "/tasks"
+@using System.Threading.Tasks
+@using Microsoft.EntityFrameworkCore
+@using MachineTest.Model
+@inject AppDbContext DbContext
+@inject NavigationManager Navigation
+<h1>Welcome To Task Management System!!!</h1>
+<br />
+
+<h3>Tasks</h3>
+@if(!string.IsNullOrWhiteSpace(errorMessage))
+{
+    <div class="alert alert-danger">
+        @errorMessage
+    </div>
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var task in tasks)
+        {
+            <tr>
+                <td>@task.Title</td>
+                <td>@task.DueDate.ToShortDateString()</td>
+                <td>@task.Status</td>
+                <td>
+                    @if(task.Status=="Pending")
+                    {
+                        <button class="btn btn-success btn-sm"
+                            @onclick="()=> MarkComplete(task.Id)">Complete</button>
+                    }
+                    <button class="btn btn-warning btn-sm" 
+                            @onclick="() => EditTask(task.Id)">Edit </button>
+                     
+                    <button class="btn btn-danger btn-sm ms-2"
+                        @onclick="()=>DeleteTask(task.Id)">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+<button class="btn btn-primary mb-3" @onclick="NavigateToAddTask">
+    Add Task
+</button>
+
+
+@code {
+    private string errorMessage = string.Empty;
+    private List<Model.TaskItem> tasks = new();
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadTasks();
+    }
+    private async Task LoadTasks()
+    {
+        try
+        {
+            tasks = await DbContext.Tasks.ToListAsync();
+        }
+        catch(Exception ex)
+        {
+            errorMessage = $"Error loading tasks:{ex.Message}";
+        }
+    }
+    private async Task MarkComplete(int taskId)
+    {
+        try
+        {
+            var task = await DbContext.Tasks.FindAsync(taskId);
+            if(task!=null)
+            {
+                task.Status = "Completed";
+                await DbContext.SaveChangesAsync();
+                await LoadTasks();
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error Updating tasks:{ex.Message}";
+        }
+    }
+
+    private async Task DeleteTask(int taskId)
+    {
+        try
+        {
+            TaskItem? task = await DbContext.Tasks.FindAsync(taskId);
+            if(task is not null)
+            {
+                DbContext.Tasks.Remove(task);
+                await DbContext.SaveChangesAsync();
+                await LoadTasks();
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error DEleting tasks:{ex.Message}";
+        }
+
+    }
+    private void EditTask(int taskId)
+    {
+        Navigation.NavigateTo($"/edittask/{taskId}");
+    }
+    private void NavigateToAddTask()
+    {
+        Navigation.NavigateTo("/addtask");
+    }
+
+}
