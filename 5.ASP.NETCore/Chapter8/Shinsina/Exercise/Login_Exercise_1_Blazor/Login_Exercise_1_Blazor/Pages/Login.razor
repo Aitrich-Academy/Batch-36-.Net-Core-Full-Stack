@@ -1,0 +1,226 @@
+﻿@* @page "/login"
+@using Login_Exercise_1_Blazor.DTO
+@using Login_Exercise_1_Blazor.Interface
+
+@inject ISeekerService SeekerService
+@inject NavigationManager Navigation
+
+<h3>Login</h3>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4" style="width: 400px;">
+        <div class="card-header bg-success text-white text-center">
+<input @bind="model.Email" placeholder="Email" />
+<br />
+<br />
+
+<input type="password" @bind="model.Password" placeholder="Password" />
+<br />
+<br />
+
+<button @onclick="Loginn">Login</button>
+<a href="register">Don't' Have Account Yet?Register</a>
+
+<p>@message</p>
+</div>
+</div>
+</div>
+@code {
+    LoginDTO model = new();
+    string message = "";
+
+    private async Task Loginn()
+    {
+        var user = await SeekerService.LoginAsync(model);
+
+        if (user != null)
+        {
+            Navigation.NavigateTo("/dashboard");
+        }
+        else
+        {
+            message = "Invalid Email or Password";
+        }
+    }
+} *@
+@page "/login"
+@using Login_Exercise_1_Blazor.DTO
+@using Login_Exercise_1_Blazor.Interface
+
+@inject ISeekerService SeekerService
+@inject NavigationManager Navigation
+
+<style>
+   
+
+    .login-page {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #e5e5e5 50%, #69aee8 50%);
+    }
+
+    .login-container {
+        width: 700px;
+        height: 550px;
+        background: white;
+        border-radius: 25px;
+        overflow: hidden;
+        display: flex;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .left-panel {
+        width: 50%;
+        background: #f8f8f8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+        .left-panel h1 {
+            font-family: Georgia, serif;
+            margin-bottom: 25px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+    .google-btn {
+        width: 220px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background: white;
+        cursor: pointer;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .divider {
+        font-size: 11px;
+        color: gray;
+        margin-bottom: 20px;
+    }
+
+    .input-box {
+        width: 260px;
+        height: 50px;
+        margin-bottom: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding-left: 10px;
+    }
+
+    .remember {
+        width: 260px;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .login-btn {
+        width: 260px;
+        height: 40px;
+        background: #2f77c7;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .signup {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+        .signup a {
+            color: #2f77c7;
+            text-decoration: none;
+        }
+
+    .right-panel {
+        width: 50%;
+    }
+
+        .right-panel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .message {
+        color: red;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="login-page">
+    <div class="login-container">
+
+        <div class="left-panel">
+
+            <div style="font-size:35px;">🖥️</div>
+
+            <h1>Welcome Back</h1>
+
+            <button class="google-btn">
+                <img src="images/google.png" height="20px" width="20px" alt="google Image" /> <strong>Log in with Google</strong>
+            </button>
+
+            <div class="divider">
+                OR LOGIN WITH EMAIL
+            </div>
+
+            <input class="input-box"
+                   @bind="model.Email"
+                   placeholder="Enter email" />
+
+            <input class="input-box"
+                   type="password"
+                   @bind="model.Password"
+                   placeholder="Enter password" />
+
+            <div class="remember">
+                <input type="checkbox" />
+                Keep me logged in
+            </div>
+
+            <button class="login-btn" @onclick="Loginn">
+                Login
+            </button>
+
+            <div class="signup">
+                <p>Don't have an account yet?</p>
+                <a href="/register">Sign up</a>
+            </div>
+
+            <p class="message">@message</p>
+
+        </div>
+
+        <div class="right-panel">
+            <img src="images/lock.png" alt="Lock Image" />
+        </div>
+
+    </div>
+</div>
+
+@code {
+    LoginDTO model = new();
+    string message = "";
+
+    private async Task Loginn()
+    {
+        var user = await SeekerService.LoginAsync(model);
+
+        if (user != null)
+        {
+            Navigation.NavigateTo("/dashboard");
+        }
+        else
+        {
+            message = "Invalid Email or Password";
+        }
+    }
+}
