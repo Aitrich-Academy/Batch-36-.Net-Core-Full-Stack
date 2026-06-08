@@ -1,0 +1,26 @@
+﻿@model WebApplication1.Models.Student
+
+<form asp-action="Edit" method="post" class="needs-validation" novalidate>
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-4">
+        <label asp-for="Name" class="form-label fw-bold fs-5 text-primary">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-4">
+        <label asp-for="Email" class="form-label fw-bold fs-5 text-primary">Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-4">
+        <label asp-for="Age" class="form-label fw-bold fs-5 text-primary">Age</label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+</form>
