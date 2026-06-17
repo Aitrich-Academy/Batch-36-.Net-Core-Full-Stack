@@ -1,0 +1,40 @@
+﻿@model StudentPortal.Models.AddStudentViewModel
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+            @Html.Partial("_Sidebar")
+        </div>
+
+        <div class="col-md-9">
+
+            <h2>Add Student</h2>
+
+            <form method="post">
+
+                <div class="mb-3">
+                    <label>Name</label>
+                    <input asp-for="Name" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Email</label>
+                    <input asp-for="Email" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Phone</label>
+                    <input asp-for="Phone" class="form-control" />
+                </div>
+
+                <button type="submit" class="btn btn-success">
+                    Save
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>

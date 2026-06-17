@@ -1,0 +1,101 @@
+﻿@model HireMeNow_MVC_Exc.Models.User
+@{
+    Layout = "_PubLayout";
+    ViewData["Title"] = "Profile";
+}
+
+<div class="container mt-4">
+
+    <div class="row">
+
+        <!-- 🔹 Sidebar -->
+        <div class="col-md-3">
+            @Html.Partial("_Sidebar")
+        </div>
+
+        <!-- 🔹 Main Content -->
+        <div class="col-md-9">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">My Profile</h3>
+                </div>
+
+                <div class="card-body">
+
+                    <!-- 🔹 READ ONLY VIEW -->
+                    <div id="profileView">
+
+                        <p><strong>First Name:</strong> @Model.FirstName</p>
+                        <p><strong>Last Name:</strong> @Model.LastName</p>
+                        <p><strong>Phone:</strong> @Model.PhoneNumber</p>
+                        <p><strong>Email:</strong> @Model.Email</p>
+
+                        <button class="btn btn-warning"
+                                onclick="showEdit()">
+                            Edit Profile
+                        </button>
+
+                    </div>
+
+                    <!-- 🔹 EDIT FORM -->
+                    <form asp-action="UpdateProfile" method="post"
+                          id="editForm" style="display:none;">
+
+                        <input type="hidden" name="UserId" value="@Model.UserId" />
+
+                        <div class="mb-3">
+                            <label class="form-label">First Name</label>
+                            <input name="FirstName" value="@Model.FirstName"
+                                   class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Last Name</label>
+                            <input name="LastName" value="@Model.LastName"
+                                   class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input name="PhoneNumber" value="@Model.PhoneNumber"
+                                   class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input value="@Model.Email"
+                                   class="form-control" readonly />
+                        </div>
+
+                        <button type="submit" class="btn btn-success">
+                            Save Changes
+                        </button>
+
+                        <button type="button"
+                                class="btn btn-secondary"
+                                onclick="cancelEdit()">
+                            Cancel
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function showEdit() {
+        document.getElementById("profileView").style.display = "none";
+        document.getElementById("editForm").style.display = "block";
+    }
+
+    function cancelEdit() {
+        document.getElementById("editForm").style.display = "none";
+        document.getElementById("profileView").style.display = "block";
+    }
+</script>

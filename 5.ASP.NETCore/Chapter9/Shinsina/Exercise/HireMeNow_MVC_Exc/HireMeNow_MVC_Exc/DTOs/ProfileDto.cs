@@ -1,0 +1,13 @@
+﻿namespace HireMeNow_MVC_Exc.DTOs
+{
+    public class ProfileDto
+    {
+        public Guid UserId { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public string PhoneNumber { get; set; }
+    }
+}

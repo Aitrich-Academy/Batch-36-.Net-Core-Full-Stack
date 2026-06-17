@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model HireMeNow_Wrkshp_MVC.Models.Job
+
+@{
+    Layout = "_PubLayout";
+}
+
+<div class="container mt-4">
+
+    <div class="card p-4 shadow">
+
+        <h2>Edit Job</h2>
+
+        <form asp-action="Edit" method="post">
+
+            <input type="hidden" asp-for="JobId" />
+            <input type="hidden" asp-for="CompanyId" />
+
+            <div class="mb-3">
+                <label asp-for="JobTitle"></label>
+                <input asp-for="JobTitle" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description"
+                          class="form-control"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Salary"></label>
+                <input asp-for="Salary"
+                       class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Location"></label>
+                <input asp-for="Location"
+                       class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="TypeOfWork"></label>
+                <input asp-for="TypeOfWork"
+                       class="form-control" />
+            </div>
+
+            <button type="submit"
+                    class="btn btn-success">
+                Save Changes
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

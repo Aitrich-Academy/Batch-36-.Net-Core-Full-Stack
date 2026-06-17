@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model HireMeNow_MVC_Exc.Models.Job
+@{
+    Layout = "_PubLayout";
+}
+@{
+    ViewData["Title"] = "Job Details";
+}
+
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-info text-white">
+            <h3>@Model.JobTitle</h3>
+        </div>
+
+        <div class="card-body">
+
+            <h5>Company</h5>
+            <p>@Model.CompanyName</p>
+
+            <h5>Location</h5>
+            <p>@Model.Location</p>
+
+            <h5>Salary</h5>
+            <p>@Model.Salary</p>
+
+            <h5>Description</h5>
+            <p>@Model.Description</p>
+
+            <a asp-action="ApplyJob"
+               asp-route-id="@Model.JobId"
+               class="btn btn-success">
+                Apply Job
+            </a>
+
+            <a asp-action="ListAllJobs"
+               class="btn btn-secondary">
+                Back
+            </a>
+
+        </div>
+
+    </div>
+
+</div>

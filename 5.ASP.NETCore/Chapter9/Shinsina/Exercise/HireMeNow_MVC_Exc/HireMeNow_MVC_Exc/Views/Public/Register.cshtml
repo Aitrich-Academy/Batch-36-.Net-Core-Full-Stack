@@ -1,0 +1,73 @@
+﻿@model HireMeNow_MVC_Exc.DTOs.RegisterDto
+@{
+    Layout = "_PubLayout";
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+            @Html.Partial("_Sidebar")
+        </div>
+
+        <div class="col-md-9 d-flex justify-content-center align-items-center bg-white">
+
+            <div class="card shadow border-0 p-4" style="width:100%; border-radius:20px;">
+                <h2 class="text-center mb-4">
+                    Registration Of Job Provider
+                </h2>
+
+                <form asp-action="Register" method="post">
+
+                    <div class="mb-3">
+                        <label>First Name</label>
+                        <input asp-for="FirstName" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Last Name</label>
+                        <input asp-for="LastName" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input asp-for="Email" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Phone Number</label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Password</label>
+                        <input asp-for="Password" type="password" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Confirm Password</label>
+                        <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                    </div>
+
+                    <button type="submit" class="btn btn-success">
+                        Register
+                    </button>
+
+                    <a asp-action="Login" class="btn btn-secondary">
+                        Login
+                    </a>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+                 

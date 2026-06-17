@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Job>
+
+@{
+    Layout = "_PubLayout";
+    ViewData["Title"] = "All Jobs";
+}
+
+<div class="container mt-4">
+
+    <div class="row">
+
+        <!-- LEFT SIDEBAR -->
+        <div class="col-md-3">
+            @Html.Partial("_Sidebar")
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="col-md-9">
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-@TempData["MessageType"]">
+                    @TempData["Message"]
+                </div>
+            }
+            <h2 class="mb-4">Available Jobs</h2>
+
+            @foreach (var job in Model)
+            {
+                <div class="card mb-3 shadow-sm">
+
+                    <div class="card-body">
+
+                        <h4 class="card-title">@job.JobTitle</h4>
+
+                        <p class="card-text">
+                            @job.Description
+                        </p>
+
+                        <p>
+                            <strong>Location:</strong> @job.Location
+                        </p>
+
+                        <div class="d-flex gap-2">
+
+                            <form asp-controller="JobSeeker"
+                                  asp-action="ApplyJob"
+                                  method="post">
+
+                                <input type="hidden" name="jobId" value="@job.JobId" />
+
+                                <button type="submit" class="btn btn-primary">
+                                    Apply Job
+                                </button>
+
+                            </form>
+
+                            <a asp-controller="JobSeeker"
+                               asp-action="SaveJob"
+                               asp-route-id="@job.JobId"
+                               class="btn btn-secondary">
+                                Save Job
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+           
+        </div>
+    </div>
+
+</div>
