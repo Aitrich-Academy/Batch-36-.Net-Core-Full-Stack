@@ -1,0 +1,88 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model HireMeNow_Wrkshp_MVC.Models.Job
+
+@{
+    Layout = "_PubLayout";
+}
+
+<div class="container-fluid mt-4">
+    <div class="row">
+
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            @Html.Partial("_Sidebar")
+        </div>
+
+        <!-- Details Section -->
+        <div class="col-md-9">
+
+            <div class="card shadow border-0" style="border-radius:20px;">
+
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">@Model.JobTitle</h3>
+                </div>
+
+                <div class="card-body p-4">
+                    
+                   
+                    <div class="mb-4">
+                        <h5>Description</h5>
+                        <p class="text-muted">
+                            @Model.Description
+                        </p>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <strong> Location</strong>
+                            <p>@Model.Location</p>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <strong> Salary</strong>
+                            <p>@Model.Salary</p>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <strong> Type Of Work</strong>
+                            <p>@Model.TypeOfWork</p>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <strong> Job ID</strong>
+                            <p>@Model.JobId</p>
+                        </div>
+
+                    </div>
+
+                    <hr />
+
+                    <div class="d-flex gap-2">
+
+                        <a asp-controller="JobProvider"
+                           asp-action="AllJobs"
+                           class="btn btn-secondary">
+                            Back to Jobs
+                        </a>
+
+                        <a asp-controller="JobProvider"
+                           asp-action="PostJob"
+                           class="btn btn-primary">
+                            Post New Job
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,81 @@
+﻿@model HireMeNow_Wrkshp_MVC.Dtos.JobDto
+
+@{
+    Layout = "_PubLayout";
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+            @Html.Partial("_Sidebar")
+        </div>
+
+        <div class="col-md-9 d-flex justify-content-center align-items-center bg-white">
+
+            <div class="card shadow border-0 p-4" style="width:100%; border-radius:20px;">
+                <h2 class="text-center mb-4">
+                    Post Job
+                </h2>
+
+                <form asp-action="PostJob" method="post">
+
+                    <div class="mb-3">
+                        <label asp-for="JobTitle" class="form-label"></label>
+                        <input asp-for="JobTitle"
+                               class="form-control"
+                               placeholder="Enter Job Title" />
+                        <span asp-validation-for="JobTitle" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Description" class="form-label"></label>
+                        <textarea asp-for="Description"
+                                  class="form-control"
+                                  rows="4"
+                                  placeholder="Enter Job Description"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Salary" class="form-label"></label>
+                        <input asp-for="Salary"
+                               class="form-control"
+                               placeholder="Enter Salary" />
+                        <span asp-validation-for="Salary" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Location" class="form-label"></label>
+                        <input asp-for="Location"
+                               class="form-control"
+                               placeholder="Enter Company Location" />
+                        <span asp-validation-for="Location" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="TypeOfWork" class="form-label"></label>
+                        <input asp-for="TypeOfWork"
+                               class="form-control"
+                               placeholder="Enter Type of Work" />
+                        <span asp-validation-for="TypeOfWork" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">
+                            Post Job
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

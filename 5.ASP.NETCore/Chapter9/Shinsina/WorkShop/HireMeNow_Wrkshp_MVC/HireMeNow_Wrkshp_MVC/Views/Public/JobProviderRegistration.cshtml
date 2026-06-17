@@ -1,0 +1,81 @@
+﻿
+@model HireMeNow_Wrkshp_MVC.Dtos.RegisterDto
+@{
+    Layout = "_PubLayout";
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+            @Html.Partial("_Sidebar")
+        </div>
+
+        <div class="col-md-9 d-flex justify-content-center align-items-center bg-white">
+
+            <div class="card shadow border-0 p-4" style="width:100%; border-radius:20px;">
+                <h2 class="text-center mb-4">
+                    Registration Of Job Provider
+                </h2>
+
+                <form asp-action="JobProviderRegistration" method="post">
+
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label"></label>
+                        <input asp-for="Name"
+                               class="form-control"
+                               placeholder="Enter Name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label"></label>
+                        <input asp-for="Email"
+                                  class="form-control"
+                                  placeholder="Enter a valid MailID"/>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="CompanyName" class="form-label"></label>
+                        <input asp-for="CompanyName"
+                               class="form-control"
+                               placeholder="Enter a valid CompanyName" />
+                        <span asp-validation-for="CompanyName" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Location" class="form-label"></label>
+                        <input asp-for="Location"
+                               class="form-control"
+                               placeholder="Enter Company Location" />
+                        <span asp-validation-for="Location" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label"></label>
+                        <input asp-for="Password"
+                               class="form-control"
+                               placeholder="Enter Password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                   
+
+                   
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">
+                            Register
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

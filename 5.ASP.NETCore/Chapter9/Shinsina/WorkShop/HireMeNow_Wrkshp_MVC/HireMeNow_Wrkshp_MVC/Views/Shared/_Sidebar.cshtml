@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<style>
+    .sidebar{
+        background-color:deepskyblue;
+    }
+</style>
+
+<div class="sidebar  text-black p-3 rounded" style="min-height:500px;">
+    <h4 class="text-center mb-4">Hire Me Now</h4>
+
+
+    <ul class="nav flex-column">
+
+        <li class="nav-item mb-2">
+            <a asp-controller="JobProvider"
+               asp-action="AllJobs"
+               class="nav-link text-black">
+                📋 Dash Board
+            </a>
+        </li>
+        <li class="nav-item mb-2">
+            <a asp-controller="JobProvider"
+               asp-action="AllJobs"
+               class="nav-link text-black">
+                📋 All Jobs
+            </a>
+        </li>
+
+        <li class="nav-item mb-2">
+            <a asp-controller="JobProvider"
+               asp-action="PostJob"
+               class="nav-link text-black">
+                ➕ Post Job
+            </a>
+        </li>
+        <li class="nav-item mb-2">
+            <a asp-controller="Student"
+               asp-action="Edit"
+               class="nav-link text-black">
+                ✏️ Messages
+            </a>
+        </li>
+
+        <li class="nav-item mb-2">
+            <a asp-controller="Student"
+               asp-action="Edit"
+               class="nav-link text-black">
+                ✏️ Settings
+            </a>
+        </li>
+
+   
+
+    </ul>
+
+</div>
+

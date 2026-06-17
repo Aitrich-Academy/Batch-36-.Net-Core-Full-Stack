@@ -1,0 +1,27 @@
+﻿@model Student_ManagmentSystemMVC_MachneTst.Dtos.LoginDto
+
+@{
+    ViewData["Title"] = "Login";
+}
+<h2>Admin Login</h2>
+<form asp-action="Login" method="post">
+
+    <div>
+        <label asp-for="Username">UserName</label>
+        <input  asp-for="Username" class="form-control"/>
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success">Login</button>
+    </div>
+</form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,116 @@
+﻿@model IEnumerable<HireMeNow_Wrkshp_MVC.Models.Job>
+
+@{
+    Layout = "_PubLayout";
+}
+
+<div class="container-fluid mt-4">
+    <div class="row">
+
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            @Html.Partial("_Sidebar")
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9">
+
+            <h2 class="mb-4">My Jobs</h2>
+
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["Success"]
+                </div>
+            }
+
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger">
+                    @TempData["Error"]
+                </div>
+            }
+
+            <div class="row">
+                @foreach (var job in Model)
+                {
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card shadow-sm border-0 h-100 job-card">
+                            <div class="card-body">
+
+                                <h5 class="card-title text-primary">
+                                    @job.JobTitle
+                                </h5>
+
+                                <p class="card-text">
+                                    @job.Description
+                                </p>
+
+                                <hr />
+
+                                <p class="mb-2">
+                                    <strong> Location:</strong>
+                                    @job.Location
+                                </p>
+
+                                <p class="mb-2">
+                                    <strong> Salary:</strong>
+                                    @job.Salary
+                                </p>
+
+                                <p class="mb-0">
+                                    <strong> Type:</strong>
+                                    @job.TypeOfWork
+                                </p>
+                                <div class="d-flex gap-2 mt-2">
+
+                                    <a asp-action="Details"
+                                       asp-route-id="@job.JobId"
+                                       class="btn btn-primary flex-fill">
+                                        View
+                                    </a>
+
+                                    <a asp-action="Edit"
+                                       asp-route-id="@job.JobId"
+                                       class="btn btn-warning flex-fill">
+                                        Edit
+                                    </a>
+
+                                </div>
+
+                                <div class="mt-2">
+
+                                    <a asp-action="Delete"
+                                       asp-route-id="@job.JobId"
+                                       class="btn btn-danger w-100"
+                                       onclick="return confirm('Delete this job?')">
+                                        Delete
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .job-card {
+        border-radius: 15px;
+        transition: all 0.3s ease;
+    }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,.15);
+        }
+
+    .card-title {
+        font-weight: 600;
+    }
+</style>

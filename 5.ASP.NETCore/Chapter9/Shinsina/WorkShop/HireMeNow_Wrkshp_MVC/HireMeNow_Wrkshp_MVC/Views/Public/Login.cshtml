@@ -1,0 +1,171 @@
+﻿@model HireMeNow_Wrkshp_MVC.Dtos.LoginDto
+<style>
+
+   
+    .login-page {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #e5e5e5 50%, #69aee8 50%);
+    }
+
+    .login-container {
+        width: 700px;
+        height: 550px;
+        background: white;
+        border-radius: 25px;
+        overflow: hidden;
+        display: flex;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .left-panel {
+        width: 50%;
+        background: #f8f8f8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+        .left-panel h1 {
+            font-family: Georgia, serif;
+            margin-bottom: 25px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+    .google-btn {
+        width: 220px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background: white;
+        cursor: pointer;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .divider {
+        font-size: 11px;
+        color: gray;
+        margin-bottom: 20px;
+    }
+
+    .input-box {
+        width: 260px;
+        height: 40px;
+        margin-bottom: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding-left: 10px;
+    }
+
+    .remember {
+        width: 260px;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .login-btn {
+        width: 260px;
+        height: 40px;
+        background: #2f77c7;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .signup {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+        .signup a {
+            color: #2f77c7;
+            text-decoration: none;
+        }
+
+    .right-panel {
+        width: 50%;
+    }
+
+        .right-panel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+.form{
+    margin-left:15%;
+}
+    .message {
+        color: red;
+        margin-top: 10px;
+    }
+</style>
+<div class="login-page">
+    <div class="login-container">
+
+        <div class="left-panel">
+
+            <div style="font-size:35px;">🖥️</div>
+
+            <h1>Welcome Back</h1>
+
+            <button type="button" class="google-btn">
+                <img src="images/google.png" height="20" width="20" alt="google Image" />
+                <strong>Log in with Google</strong>
+            </button>
+
+            <div class="divider">
+                OR LOGIN WITH EMAIL
+            </div>
+
+            <!-- FORM START -->
+            <form asp-controller="Public" asp-action="Login" method="post" class="form">
+
+                <input class="input-box"
+                       type="email"
+                       name="Email"
+                       placeholder="Enter email"
+                       required />
+
+                <input class="input-box"
+                       type="password"
+                       name="Password"
+                       placeholder="Enter password"
+                       required />
+
+                <div class="remember">
+                    <input type="checkbox" name="RememberMe" />
+                    Keep me logged in
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+            </form>
+            <!-- FORM END -->
+
+            <div class="signup">
+                <p>Don't have an account yet?</p>
+                <a asp-controller="Public" asp-action="JobProviderRegistration">Sign up</a>
+            </div>
+
+        </div>
+
+        <div class="right-panel">
+            <img src="images/lock.png" alt="Lock Image" />
+        </div>
+
+    </div>
+</div>
+
+@if (ViewBag.Error != null)
+{
+    <p>@ViewBag.Error</p>
+}

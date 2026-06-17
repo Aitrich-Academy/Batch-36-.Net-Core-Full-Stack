@@ -1,0 +1,143 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model HireMeNow_Wrkshp_MVC.Dtos.RegisterDto
+
+@* @{
+    Layout = "_PubLayout";
+} *@
+
+<div class="container-fluid vh-100">
+    <div class="row h-100">
+
+        <!-- Left Side -->
+        <div class="col-md-6 d-flex justify-content-center align-items-center bg-white">
+
+            <div class="card shadow border-0 p-4" style="width:500px;border-radius:20px;">
+
+                <h2 class="text-center mb-4">
+                    Register
+                </h2>
+
+                <form asp-action="JobProviderRegistration" method="post">
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Full Name
+                        </label>
+
+                        <input asp-for="Name"
+                               class="form-control"
+                               placeholder="Enter Name" />
+
+                        <span asp-validation-for="Name"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Email
+                        </label>
+
+                        <input asp-for="Email"
+                               class="form-control"
+                               placeholder="Enter Email" />
+
+                        <span asp-validation-for="Email"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Password
+                        </label>
+
+                        <input asp-for="Password"
+                               type="password"
+                               class="form-control"
+                               placeholder="Enter Password" />
+
+                        <span asp-validation-for="Password"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Company Name
+                        </label>
+
+                        <input asp-for="CompanyName"
+                               class="form-control"
+                               placeholder="Enter Company Name" />
+
+                        <span asp-validation-for="CompanyName"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Location
+                        </label>
+
+                        <input asp-for="Location"
+                               class="form-control"
+                               placeholder="Enter Location" />
+
+                        <span asp-validation-for="Location"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit"
+                                class="btn btn-primary">
+                            Register
+                        </button>
+                    </div>
+
+                    <div class="text-center mt-3">
+                        Already have an account?
+
+                        <a asp-controller="Public"
+                           asp-action="Login">
+                            Login
+                        </a>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-md-6 d-flex justify-content-center align-items-center"
+             style="background-color:#EAF4FF;">
+
+            <div class="text-center">
+
+                <img src="~/images/register.png"
+                     class="img-fluid"
+                     style="max-height:450px;" />
+
+                <h3 class="mt-4">
+                    Join HireMeNow
+                </h3>
+
+                <p class="text-muted">
+                    Post jobs and find talented candidates.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
