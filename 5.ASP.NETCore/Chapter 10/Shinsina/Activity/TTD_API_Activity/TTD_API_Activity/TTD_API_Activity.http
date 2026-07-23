@@ -1,0 +1,6 @@
+@TTD_API_Activity_HostAddress = http://localhost:5227
+
+GET {{TTD_API_Activity_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
